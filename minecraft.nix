@@ -33,6 +33,7 @@ in {
     eula = true;
     openFirewall = false;
     dataDir = "/srv/minecraft";
+    runDir = "/run/minecraft";
 
     servers.fabric = {
       enable = true;

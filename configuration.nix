@@ -178,4 +178,8 @@
 
   nixpkgs.config.allowUnfree = true;
   hardware.enableRedistributableFirmware = true;
+
+  environment.shellAliases = {
+    mcc = "sudo -u minecraft tmux -S /run/minecraft/fabric.sock attach";
+  };
 }
