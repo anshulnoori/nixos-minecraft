@@ -6,8 +6,8 @@
 }: let
   # https://github.com/Obydux/Minecraft-GraalVM-Flags
   jvmOpts = lib.concatStringsSep " " [
-    "-Xms12G"
-    "-Xmx12G"
+    "-Xms2G"
+    "-Xmx10G"
     "-XX:+UseZGC"
     "-XX:+ZGenerational"
     "-XX:ZUncommitDelay=300"
@@ -75,6 +75,12 @@ in {
         mods = config.minecraftMods.modsDrv;
         "world/datapacks" = config.minecraftMods.datapacks;
       };
+    };
+  };
+
+  systemd.services.minecraft-server-fabric = {
+    environment = {
+      LD_LIBRARY_PATH = lib.makeLibraryPath [pkgs.udev];
     };
   };
 }
