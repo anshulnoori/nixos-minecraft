@@ -1,17 +1,6 @@
 {
   description = "Minecraft Java server — Fabric 1.21.10 on NixOS 25.11";
 
-  nixConfig = {
-    extra-substituters = [
-      "https://attic.xuyh0120.win/lantian"
-      "https://cache.garnix.io"
-    ];
-    extra-trusted-public-keys = [
-      "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc="
-      "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
-    ];
-  };
-
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
 
