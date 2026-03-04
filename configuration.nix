@@ -186,4 +186,6 @@
 
   nixpkgs.config.allowUnfree = true;
   hardware.enableRedistributableFirmware = true;
+
+  systemd.services.minecraft-server-fabric.serviceConfig.RestartSec = "10s";
 }

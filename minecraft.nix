@@ -42,6 +42,7 @@ in {
         loaderVersion = "0.18.4";
       };
       restart = "always";
+      enableReload = true;
 
       jvmOpts = jvmOpts;
 
