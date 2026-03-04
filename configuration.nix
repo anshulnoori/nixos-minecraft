@@ -124,6 +124,7 @@
 
   services.upower.enable = true;
 
+  environment.enableAllTerminfo = true;
   environment.systemPackages = with pkgs; [
     tmux
     btop
