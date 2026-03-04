@@ -45,6 +45,11 @@
 
     nftables.enable = true;
     firewall.enable = false;
+
+    nameservers = [
+      "1.1.1.1"
+      "1.0.0.1"
+    ];
   };
 
   #   - Minecraft port 25565  → only from local subnet 192.168.1.0/24
