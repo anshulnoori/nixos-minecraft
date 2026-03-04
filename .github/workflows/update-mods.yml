@@ -1,0 +1,108 @@
+name: Update mods.nix from server.mrpack
+
+# Triggers when server.mrpack is pushed/changed on the master branch.
+# The workflow:
+#   1. Installs Nix (with flakes)
+#   2. Runs scripts/mrpack-to-nix.sh to regenerate mods.nix
+#   3. Commits and pushes the updated mods.nix back to master
+#
+# To update your modpack:
+#   1. Export from your Minecraft launcher as server.mrpack
+#   2. Copy to the repo root (replace the existing file)
+#   3. git add server.mrpack && git commit -m "chore: update modpack" && git push
+#   4. This action runs automatically and commits the new mods.nix
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "server.mrpack"
+
+  # Allow manual trigger from the GitHub Actions UI
+  workflow_dispatch:
+
+permissions:
+  contents: write  # Needed to push the updated mods.nix back
+
+jobs:
+  update-mods:
+    name: Regenerate mods.nix
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Fetch full history so we can push back
+          fetch-depth: 1
+          lfs: true
+
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@v14
+        with:
+          # Enable flakes and nix-command
+          extra-conf: |
+            experimental-features = nix-command flakes
+
+      - name: Cache Nix store
+        uses: DeterminateSystems/magic-nix-cache-action@v8
+
+      - name: Check server.mrpack exists
+        run: |
+          if [[ ! -f server.mrpack ]]; then
+            echo "server.mrpack not found in repo root." >&2
+            exit 1
+          fi
+          echo "Found server.mrpack ($(du -h server.mrpack | cut -f1))"
+
+      - name: Run mrpack-to-nix.sh
+        run: |
+          # Run the conversion script inside the dev shell so jq/unzip are available
+          nix develop --command bash scripts/mrpack-to-nix.sh server.mrpack
+
+      - name: Check if mods.nix or datapacks/ changed
+        id: check_changes
+        run: |
+          if git diff --quiet mods.nix && git diff --quiet datapacks/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "mods.nix and datapacks/ are unchanged — nothing to commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "Changes detected:"
+            git diff --stat mods.nix datapacks/ || true
+          fi
+
+      - name: Commit and push updated mods.nix and datapacks/
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add mods.nix datapacks/
+
+          # Extract pack name and version from the generated file header for commit message
+          PACK_INFO="$(grep -m1 '# Source:' mods.nix | sed 's/# Source: *//' || echo 'server.mrpack')"
+
+          git commit -m "chore: regenerate mods.nix from $PACK_INFO"
+
+          git push origin master
+
+      - name: Summary
+        if: always()
+        run: |
+          MOD_COUNT="$(grep -c 'pkgs.fetchurl' mods.nix || echo 0)"
+          DATAPACK_COUNT="$(ls datapacks/ 2>/dev/null | wc -l || echo 0)"
+          PACK_INFO="$(grep -m1 '# Source:' mods.nix | sed 's/# Source: *//' || echo 'server.mrpack')"
+          echo "### mods.nix update" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Field | Value |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|---|---|" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Pack | $PACK_INFO |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Server-side mods | $MOD_COUNT |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Local datapacks | $DATAPACK_COUNT |" >> "$GITHUB_STEP_SUMMARY"
+          if [[ "${{ steps.check_changes.outputs.changed }}" == "true" ]]; then
+            echo "| Status | Updated and committed |" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "| Status | No changes |" >> "$GITHUB_STEP_SUMMARY"
+          fi

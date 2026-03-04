@@ -1,0 +1,1149 @@
+
+[
+    {
+        "filename": "accessories-fabric-1.4.3-beta+1.21.10.jar",
+        "name": "Accessories",
+        "url": "https://modrinth.com/mod/jtmvUHXj",
+        "version": "1.4.3-beta"
+    },
+    {
+        "filename": "accessorify-2.4.0-beta.5+1.21.10-fabric.jar",
+        "name": "Accessorify",
+        "url": "https://modrinth.com/mod/CVRzrXGP",
+        "version": "2.4.0-beta.5"
+    },
+    {
+        "filename": "advancednetherite-fabric-2.3.1-1.21.10.jar",
+        "name": "Advanced Netherite",
+        "url": "https://modrinth.com/mod/CFX9ftUJ",
+        "version": "2.3.1-1.21.10"
+    },
+    {
+        "filename": "Almanac-1.21.9-x-fabric-1.5.0.jar",
+        "name": "Almanac",
+        "url": "https://modrinth.com/mod/Gi02250Z",
+        "version": "1.5.0"
+    },
+    {
+        "filename": "antiquetradingship-1.5.0-fabric-1.21.10.jar",
+        "name": "AntiqueTradingShip",
+        "url": "https://modrinth.com/mod/luvBs7J4",
+        "version": "1.4.0"
+    },
+    {
+        "filename": "anvilrestoration-1.21.10-2.5.jar",
+        "name": "Anvil Restoration",
+        "url": "https://modrinth.com/mod/bd8nwTGy",
+        "version": "2.5"
+    },
+    {
+        "filename": "appleskin-fabric-mc1.21.9-3.0.7.jar",
+        "name": "AppleSkin",
+        "url": "https://modrinth.com/mod/EsAfCjCV",
+        "version": "3.0.7+mc1.21.9"
+    },
+    {
+        "filename": "architectury-18.0.8-fabric.jar",
+        "name": "Architectury",
+        "url": "https://modrinth.com/mod/lhGA9TYQ",
+        "version": "18.0.8"
+    },
+    {
+        "filename": "async-fabric-0.2.0+alpha-1.21.10.jar",
+        "name": "Async",
+        "url": "https://modrinth.com/mod/vEC2jm6I",
+        "version": "0.2.0+alpha-1.21.10"
+    },
+    {
+        "filename": "attributefix-fabric-1.21.10-21.10.2.jar",
+        "name": "AttributeFix",
+        "url": "https://modrinth.com/mod/lOOpEntO",
+        "version": "21.10.2"
+    },
+    {
+        "filename": "BadOptimizations-2.4.1-1.21.10.jar",
+        "name": "BadOptimizations",
+        "url": "https://modrinth.com/mod/g96Z4WVZ",
+        "version": "2.4.1"
+    },
+    {
+        "filename": "BetterAdvancements-Fabric-1.21.10-0.4.7.50.jar",
+        "name": "Better Advancements",
+        "url": "https://modrinth.com/mod/Q2OqKxDG",
+        "version": "0.4.7.50"
+    },
+    {
+        "filename": "better-selection-1.7.1.jar",
+        "name": "Better Text Selection",
+        "url": "https://modrinth.com/mod/xIpcAYJL",
+        "version": "1.7.1"
+    },
+    {
+        "filename": "BetterTridents-v21.10.0+mc1.21.10-Fabric.jar",
+        "name": "Better Tridents",
+        "url": "https://modrinth.com/mod/KNUSlHiU",
+        "version": "21.10.0"
+    },
+    {
+        "filename": "BetterF3-16.0.3-Fabric-1.21.10.jar",
+        "name": "BetterF3",
+        "url": "https://modrinth.com/mod/8shC1gFX",
+        "version": "16.0.3"
+    },
+    {
+        "filename": "bettertrims-4.0.4+1.21.10-fabric.jar",
+        "name": "BetterTrims",
+        "url": "https://modrinth.com/mod/98ytUvlc",
+        "version": "4.0.4"
+    },
+    {
+        "filename": "Big Globe-5.2.0-MC1.21.10.jar",
+        "name": "Big Globe",
+        "url": "https://modrinth.com/mod/xsng1aJf",
+        "version": "5.2.0"
+    },
+    {
+        "filename": "blur-fabric-6.2.0+1.21.10.jar",
+        "name": "Blur+",
+        "url": "https://modrinth.com/mod/NK39zBp2",
+        "version": "6.2.0"
+    },
+    {
+        "filename": "boatiview-fabric-0.0.7-1.21.10.jar",
+        "name": "Boat Item View",
+        "url": "https://modrinth.com/mod/BdKIyOLe",
+        "version": "0.0.7"
+    },
+    {
+        "filename": "Boids-2.0.4+1.21.9.jar",
+        "name": "Boids",
+        "url": "https://modrinth.com/mod/2OckSy74",
+        "version": "2.0.4+1.21.9"
+    },
+    {
+        "filename": "calcmod-1.4.3+fabric.1.21.9.jar",
+        "name": "CalcMod",
+        "url": "https://modrinth.com/mod/XoHTb2Ap",
+        "version": "1.4.3+fabric.1.21.9"
+    },
+    {
+        "filename": "cardinal-components-api-7.2.0.jar",
+        "name": "Cardinal Components API",
+        "url": "https://modrinth.com/mod/K01OU20C",
+        "version": "7.2.0"
+    },
+    {
+        "filename": "chat_heads-1.2.2-fabric-1.21.9.jar",
+        "name": "Chat Heads",
+        "url": "https://modrinth.com/mod/Wb5oqrBJ",
+        "version": "1.2.2"
+    },
+    {
+        "filename": "cherishedworlds-fabric-14.0.0+1.21.10.jar",
+        "name": "Cherished Worlds",
+        "url": "https://modrinth.com/mod/3azQ6p0W",
+        "version": "14.0.0+1.21.10"
+    },
+    {
+        "filename": "chesttracker-2.8.1+1.21.10.jar",
+        "name": "Chest Tracker (Unofficial port)",
+        "url": "https://modrinth.com/mod/VC2NohMN",
+        "version": "2.8.1+1.21.10"
+    },
+    {
+        "filename": "Chunky-Fabric-1.4.52.jar",
+        "name": "Chunky",
+        "url": "https://modrinth.com/mod/fALzjamp",
+        "version": "1.4.52"
+    },
+    {
+        "filename": "chunky-offline-v1.1.0.jar",
+        "name": "Chunky Offline",
+        "url": "https://modrinth.com/mod/VfHc5JEX",
+        "version": "1-v1.1.0"
+    },
+    {
+        "filename": "cloth-config-20.0.149-fabric.jar",
+        "name": "Cloth Config v20",
+        "url": "https://modrinth.com/mod/9s6osm5g",
+        "version": "20.0.149"
+    },
+    {
+        "filename": "Clumps-fabric-1.21.10-28.0.0.1.jar",
+        "name": "Clumps",
+        "url": "https://modrinth.com/mod/Wnxd13zP",
+        "version": "28.0.0.1"
+    },
+    {
+        "filename": "collective-1.21.10-8.13.jar",
+        "name": "Collective",
+        "url": "https://modrinth.com/mod/e0M1UDsY",
+        "version": "8.13"
+    },
+    {
+        "filename": "c2me-fabric-mc1.21.10-0.3.6+alpha.0.9.jar",
+        "name": "Concurrent Chunk Management Engine",
+        "url": "https://modrinth.com/mod/VSNURh3q",
+        "version": "0.3.6+alpha.0.9+1.21.10"
+    },
+    {
+        "filename": "configurable-3.3.2+1.21.10-fabric.jar",
+        "name": "Configurable",
+        "url": "https://modrinth.com/mod/lGffrQ3O",
+        "version": "3.3.2"
+    },
+    {
+        "filename": "continuity-3.0.1-beta.2+1.21.10.jar",
+        "name": "Continuity",
+        "url": "https://modrinth.com/mod/1IjD5062",
+        "version": "3.0.1-beta.2+1.21.10"
+    },
+    {
+        "filename": "Controlling-fabric-1.21.10-28.0.2.jar",
+        "name": "Controlling",
+        "url": "https://modrinth.com/mod/xv94TkTM",
+        "version": "28.0.2"
+    },
+    {
+        "filename": "create-fly-1.21.10-6.0.9-2.jar",
+        "name": "Create Fly",
+        "url": "https://modrinth.com/mod/dKvj0eNn",
+        "version": "6.0.9-2"
+    },
+    {
+        "filename": "cristellib-fabric-1.21.10-3.0.3.jar",
+        "name": "Cristel Lib",
+        "url": "https://modrinth.com/mod/cl223EMc",
+        "version": "3.0.3"
+    },
+    {
+        "filename": "cryingportals-1.21.10-2.9.jar",
+        "name": "Crying Portals",
+        "url": "https://modrinth.com/mod/3RkVNglH",
+        "version": "2.9"
+    },
+    {
+        "filename": "cwb-fabric-3.0.0+mc1.21.5.jar",
+        "name": "Cubes Without Borders",
+        "url": "https://modrinth.com/mod/ETlrkaYF",
+        "version": "3.0.0+mc1.21.5"
+    },
+    {
+        "filename": "cullleaves-fabric-4.1.1+1.21.10.jar",
+        "name": "Cull Leaves",
+        "url": "https://modrinth.com/mod/GNxdLCoP",
+        "version": "4.1.1"
+    },
+    {
+        "filename": "CutThrough-v21.10.0+mc1.21.10-Fabric.jar",
+        "name": "Cut Through",
+        "url": "https://modrinth.com/mod/Dk6su9JN",
+        "version": "21.10.0"
+    },
+    {
+        "filename": "cycletitlescreensplash-1.21.10-1.3.jar",
+        "name": "Cycle Title Screen Splash",
+        "url": "https://modrinth.com/mod/ubb2Lt4u",
+        "version": "1.3"
+    },
+    {
+        "filename": "debugify-1.21.10+1.1.jar",
+        "name": "Debugify",
+        "url": "https://modrinth.com/mod/QwxR6Gcd",
+        "version": "1.21.10+1.1"
+    },
+    {
+        "filename": "DiagonalFences-v21.10.0+mc1.21.10-Fabric.jar",
+        "name": "Diagonal Fences",
+        "url": "https://modrinth.com/mod/IKARgflD",
+        "version": "21.10.0"
+    },
+    {
+        "filename": "DiagonalWalls-v21.10.0+mc1.21.10-Fabric.jar",
+        "name": "Diagonal Walls",
+        "url": "https://modrinth.com/mod/FQgc8dib",
+        "version": "21.10.0"
+    },
+    {
+        "filename": "DiagonalWindows-v21.10.0+mc1.21.10-Fabric.jar",
+        "name": "Diagonal Windows",
+        "url": "https://modrinth.com/mod/oOi0CKes",
+        "version": "21.10.0"
+    },
+    {
+        "filename": "dismountentity-1.21.10-3.6.jar",
+        "name": "Dismount Entity",
+        "url": "https://modrinth.com/mod/H7N61Wcl",
+        "version": "3.6"
+    },
+    {
+        "filename": "Drip Sounds-0.5.2+1.21.10-Fabric.jar",
+        "name": "Drip Sounds",
+        "url": "https://modrinth.com/mod/T8MMXTpr",
+        "version": "0.5.2"
+    },
+    {
+        "filename": "dungeons-and-taverns-v5.0.4.jar",
+        "name": "Dungeons and Taverns",
+        "url": "https://modrinth.com/mod/tpehi7ww",
+        "version": "1-v5.0.4"
+    },
+    {
+        "filename": "DyedFlames-v21.10.0+mc1.21.10-Fabric.jar",
+        "name": "Dyed Flames",
+        "url": "https://modrinth.com/mod/66H5fc9R",
+        "version": "21.10.0"
+    },
+    {
+        "filename": "dynamic-fps-3.11.4+minecraft-1.21.9-fabric.jar",
+        "name": "Dynamic FPS",
+        "url": "https://modrinth.com/mod/LQ3K71Q1",
+        "version": "3.11.4"
+    },
+    {
+        "filename": "elytra_physics-fabric-2.4_mc1.21.9-10.jar",
+        "name": "Elytra Physics",
+        "url": "https://modrinth.com/mod/jfvCMH0K",
+        "version": "2.4_mc1.21.9-10"
+    },
+    {
+        "filename": "elytratrims-fabric-4.5.7+1.21.10.jar",
+        "name": "Elytra Trims",
+        "url": "https://modrinth.com/mod/XpzGz7KD",
+        "version": "4.5.7"
+    },
+    {
+        "filename": "enchdesc-fabric-1.21.10-21.10.2.jar",
+        "name": "EnchantmentDescriptions",
+        "url": "https://modrinth.com/mod/UVtY3ZAC",
+        "version": "21.10.2"
+    },
+    {
+        "filename": "entity_model_features_1.21.9-fabric-3.0.12.jar",
+        "name": "Entity Model Features",
+        "url": "https://modrinth.com/mod/4I1XuqiY",
+        "version": "3.0.12"
+    },
+    {
+        "filename": "entity_sound_features_1.21.9-fabric-0.7.2.jar",
+        "name": "Entity Sound Features",
+        "url": "https://modrinth.com/mod/IMuO8COj",
+        "version": "0.7.2"
+    },
+    {
+        "filename": "entity_texture_features_1.21.9-fabric-7.0.9.jar",
+        "name": "Entity Texture Features",
+        "url": "https://modrinth.com/mod/BVzZfTc1",
+        "version": "7.0.9"
+    },
+    {
+        "filename": "entityculling-fabric-1.9.5-mc1.21.10.jar",
+        "name": "EntityCulling",
+        "url": "https://modrinth.com/mod/NNAgCjsB",
+        "version": "1.9.5"
+    },
+    {
+        "filename": "EuphoriaPatcher-1.8.6-r5.7.1-fabric.jar",
+        "name": "Euphoria Patcher",
+        "url": "https://modrinth.com/mod/4H6sumDB",
+        "version": "1.8.6-r5.7.1-fabric"
+    },
+    {
+        "filename": "ExplorersCompass-1.21.10-2.2.7-fabric.jar",
+        "name": "Explorer's Compass",
+        "url": "https://modrinth.com/mod/RV1qfVQ8",
+        "version": "1.21.10-2.2.7-fabric"
+    },
+    {
+        "filename": "Explorify v1.6.4 f15-88.mod.jar",
+        "name": "Explorify",
+        "url": "https://modrinth.com/mod/HSfsxuTo",
+        "version": "1.6.4"
+    },
+    {
+        "filename": "explosive-enhancement-1.4.0-1.21.10.jar",
+        "name": "Explosive Enhancement",
+        "url": "https://modrinth.com/mod/OSQ8mw2r",
+        "version": "1.4.0-1.21.10"
+    },
+    {
+        "filename": "fabric-api-0.138.4+1.21.10.jar",
+        "name": "Fabric API",
+        "url": "https://modrinth.com/mod/P7dR8mSH",
+        "version": "0.138.4+1.21.10"
+    },
+    {
+        "filename": "fabric-language-kotlin-1.13.9+kotlin.2.3.10.jar",
+        "name": "Fabric Language Kotlin",
+        "url": "https://modrinth.com/mod/Ha28R6CL",
+        "version": "1.13.9+kotlin.2.3.10"
+    },
+    {
+        "filename": "fabrishot-1.16.3.jar",
+        "name": "Fabrishot",
+        "url": "https://modrinth.com/mod/3qsfQtE9",
+        "version": "1.16.3"
+    },
+    {
+        "filename": "FarmersDelight-1.21.10-3.4.2+refabricated.jar",
+        "name": "Farmer's Delight",
+        "url": "https://modrinth.com/mod/7vxePowz",
+        "version": "1.21.10-3.4.2+refabricated"
+    },
+    {
+        "filename": "zfastnoise-1.0.19+1.21.9.jar",
+        "name": "Fast Noise Mod",
+        "url": "https://modrinth.com/mod/OnlVIpq5",
+        "version": "1.0.19+1.21.9"
+    },
+    {
+        "filename": "fastquit-3.1.2+mc1.21.10.jar",
+        "name": "FastQuit",
+        "url": "https://modrinth.com/mod/x1hIzbuY",
+        "version": "3.1.2+mc1.21.10"
+    },
+    {
+        "filename": "FastSuite-1.21.10-6.0.7.jar",
+        "name": "FastSuite [fabric]",
+        "url": "https://modrinth.com/mod/83xBWJAx",
+        "version": "6.0.7"
+    },
+    {
+        "filename": "ferritecore-8.1.0-fabric.jar",
+        "name": "FerriteCore",
+        "url": "https://modrinth.com/mod/uXXizFIs",
+        "version": "8.1.0"
+    },
+    {
+        "filename": "firstperson-fabric-2.6.3-mc1.21.10.jar",
+        "name": "FirstPerson",
+        "url": "https://modrinth.com/mod/H5XMjpHi",
+        "version": "2.6.3"
+    },
+    {
+        "filename": "ForgeConfigAPIPort-v21.10.1+mc1.21.10-Fabric.jar",
+        "name": "Forge Config API Port",
+        "url": "https://modrinth.com/mod/ohNO6lps",
+        "version": "21.10.1"
+    },
+    {
+        "filename": "friendsandfoes-fabric-4.0.21+mc1.21.10.jar",
+        "name": "Friends&Foes",
+        "url": "https://modrinth.com/mod/POQ2i9zu",
+        "version": "4.0.21"
+    },
+    {
+        "filename": "frostiful-2.2.13+1.21.10.jar",
+        "name": "Frostiful",
+        "url": "https://modrinth.com/mod/Ae6qoBj3",
+        "version": "2.2.13+1.21.10"
+    },
+    {
+        "filename": "fzzy_config-0.7.6+1.21.9.jar",
+        "name": "Fzzy Config",
+        "url": "https://modrinth.com/mod/hYykXjDp",
+        "version": "0.7.6+1.21.9"
+    },
+    {
+        "filename": "GlitchCore-fabric-1.21.10-21.10.0.4.jar",
+        "name": "GlitchCore",
+        "url": "https://modrinth.com/mod/s3dmwKy5",
+        "version": "21.10.0.4"
+    },
+    {
+        "filename": "grind-enchantments-4.1.0+1.21.10.jar",
+        "name": "Grind Enchantments",
+        "url": "https://modrinth.com/mod/WC4UgDcZ",
+        "version": "4.1.0+1.21.10"
+    },
+    {
+        "filename": "helium-1.6.1.jar",
+        "name": "Helium",
+        "url": "https://modrinth.com/mod/dciNwIPV",
+        "version": "1.6.1"
+    },
+    {
+        "filename": "hiddenrecipebook-1.21.10-5.1.jar",
+        "name": "Hidden Recipe Book",
+        "url": "https://modrinth.com/mod/NbPqFmZs",
+        "version": "5.1"
+    },
+    {
+        "filename": "highlight-fabric-1.21.9-3.9.0.jar",
+        "name": "Highlight",
+        "url": "https://modrinth.com/mod/Vz96hXMh",
+        "version": "3.9.0"
+    },
+    {
+        "filename": "horseman-fabric-1.21.10-1.6.0.jar",
+        "name": "Horseman",
+        "url": "https://modrinth.com/mod/qIv5FhAA",
+        "version": "1.6.0"
+    },
+    {
+        "filename": "imfast-FABRIC-1.21.10-1.0.3.jar",
+        "name": "I'm Fast",
+        "url": "https://modrinth.com/mod/PaUMOeP0",
+        "version": "1.0.3"
+    },
+    {
+        "filename": "ImmediatelyFast-Fabric-1.13.5+1.21.10.jar",
+        "name": "ImmediatelyFast",
+        "url": "https://modrinth.com/mod/5ZwdcRci",
+        "version": "1.13.5+1.21.10"
+    },
+    {
+        "filename": "immersiveoverlays-1.5.0+1.21.10-fabric.jar",
+        "name": "Immersive Overlays",
+        "url": "https://modrinth.com/mod/PKoLkD98",
+        "version": "1.5.0+1.21.10"
+    },
+    {
+        "filename": "infinitetrading-1.21.10-4.6.jar",
+        "name": "Infinite Trading",
+        "url": "https://modrinth.com/mod/U3eoZT3o",
+        "version": "4.6"
+    },
+    {
+        "filename": "InvMove-0.9.3+1.21.10-Fabric.jar",
+        "name": "InvMove",
+        "url": "https://modrinth.com/mod/REfW2AEX",
+        "version": "0.9.3"
+    },
+    {
+        "filename": "InvMoveCompats-0.5.0+1.21.10-Fabric.jar",
+        "name": "InvMoveCompats",
+        "url": "https://modrinth.com/mod/6IpcGP7T",
+        "version": "0.5.0"
+    },
+    {
+        "filename": "iris-fabric-1.9.7+mc1.21.10.jar",
+        "name": "Iris",
+        "url": "https://modrinth.com/mod/YL57xq9U",
+        "version": "1.9.7+mc1.21.10"
+    },
+    {
+        "filename": "takesapillage-fabric-1.0.10+mc1.21.10.jar",
+        "name": "It Takes a Pillage Continuation",
+        "url": "https://modrinth.com/mod/QOJOg1gE",
+        "version": "1.0.10"
+    },
+    {
+        "filename": "Jade-1.21.9-Fabric-20.1.0.jar",
+        "name": "Jade",
+        "url": "https://modrinth.com/mod/nvQzSEkH",
+        "version": "20.1.0+fabric"
+    },
+    {
+        "filename": "krlo-1.16.2-1.21.11--0.2.1.jar",
+        "name": "Kle's Render Layer Optimizer",
+        "url": "https://modrinth.com/mod/I7pelLQM",
+        "version": "1.16.2-1.21.11--0.2.1"
+    },
+    {
+        "filename": "krypton-0.2.10.jar",
+        "name": "Krypton",
+        "url": "https://modrinth.com/mod/fQEb0iXm",
+        "version": "0.2.10"
+    },
+    {
+        "filename": "lambdynamiclights-4.8.7+1.21.10.jar",
+        "name": "LambDynamicLights",
+        "url": "https://modrinth.com/mod/yBW8D80W",
+        "version": "4.8.7+1.21.10"
+    },
+    {
+        "filename": "language-reload-1.7.5+1.21.10.jar",
+        "name": "Language Reload",
+        "url": "https://modrinth.com/mod/uLbm7CG6",
+        "version": "1.7.5+1.21.10"
+    },
+    {
+        "filename": "Letmedespawn-1.21.9-fabric-1.5.2b.jar",
+        "name": "Let Me Despawn",
+        "url": "https://modrinth.com/mod/vE2FN5qn",
+        "version": "1.5.2b"
+    },
+    {
+        "filename": "litematica-fabric-1.21.10-0.24.7.jar",
+        "name": "Litematica",
+        "url": "https://modrinth.com/mod/bEpr0Arc",
+        "version": "0.24.7"
+    },
+    {
+        "filename": "litematica-enderchest-materials-1.1.0+1.21.5+.jar",
+        "name": "Litematica Enderchest Materials",
+        "url": "https://modrinth.com/mod/oBzw5QUs",
+        "version": "1.1.0"
+    },
+    {
+        "filename": "lithium-fabric-0.20.1+mc1.21.10.jar",
+        "name": "Lithium",
+        "url": "https://modrinth.com/mod/gvQqBUqZ",
+        "version": "0.20.1+mc1.21.10"
+    },
+    {
+        "filename": "lmft-1.1.1+1.21.9-fabric.jar",
+        "name": "Load My F***ing Tags",
+        "url": "https://modrinth.com/mod/67kVxsaO",
+        "version": "1.1.1+1.21.9"
+    },
+    {
+        "filename": "mru-1.0.25+edge+1.21.10-fabric.jar",
+        "name": "M.R.U",
+        "url": "https://modrinth.com/mod/SNVQ2c0g",
+        "version": "1.0.25+edge+1.21.10"
+    },
+    {
+        "filename": "malilib-fabric-1.21.10-0.26.8.jar",
+        "name": "MaLiLib",
+        "url": "https://modrinth.com/mod/GcWjdA9I",
+        "version": "0.26.8"
+    },
+    {
+        "filename": "make_bubbles_pop-0.3.2-fabric-mc1.21.9-1.21.10.jar",
+        "name": "Make Bubbles Pop",
+        "url": "https://modrinth.com/mod/gPCdW0Wr",
+        "version": "0.3.2-fabric"
+    },
+    {
+        "filename": "metalrender-v0.1.6.jar",
+        "name": "MetalRender",
+        "url": "https://modrinth.com/mod/V2fEL3PE",
+        "version": "0.1.6"
+    },
+    {
+        "filename": "midnightlib-fabric-1.9.2+1.21.10.jar",
+        "name": "MidnightLib",
+        "url": "https://modrinth.com/mod/codAaoxh",
+        "version": "1.9.2"
+    },
+    {
+        "filename": "minihud-fabric-1.21.10-0.37.6.jar",
+        "name": "MiniHUD",
+        "url": "https://modrinth.com/mod/UMxybHE8",
+        "version": "0.37.6"
+    },
+    {
+        "filename": "MixinTrace reloaded-1.1.0+1.21.11.jar",
+        "name": "MixinTrace reloaded",
+        "url": "https://modrinth.com/mod/wx2WW8va",
+        "version": "1.1.0"
+    },
+    {
+        "filename": "modmenu-16.0.0.jar",
+        "name": "Mod Menu",
+        "url": "https://modrinth.com/mod/mOgUt4GM",
+        "version": "16.0.0"
+    },
+    {
+        "filename": "modelfix-1.21.10-1.12-fabric.jar",
+        "name": "Model Gap Fix",
+        "url": "https://modrinth.com/mod/QdG47OkI",
+        "version": "1.21.10-1.12"
+    },
+    {
+        "filename": "modernfix-fabric-latest.jar",
+        "name": "ModernFix",
+        "url": "https://modrinth.com/mod/TjSm1wrD",
+        "version": "5.20.6"
+    },
+    {
+        "filename": "monsters-in-the-closet-1.0.3+1.21.9.jar",
+        "name": "Monsters in the Closet",
+        "url": "https://modrinth.com/mod/GMA8jFBD",
+        "version": "1.0.3+1.21.9"
+    },
+    {
+        "filename": "moogs_structure_lib-1.1.0-1.21.5-1.21.10-fabric.jar",
+        "name": "Moog's Structure Lib",
+        "url": "https://modrinth.com/mod/1oUDhxuy",
+        "version": "1.1.0-1.21.5-1.21.10-fabric"
+    },
+    {
+        "filename": "MoogsEndStructures-1.21-2.0.1.jar",
+        "name": "MoogsEndStructures",
+        "url": "https://modrinth.com/mod/r4PuRGfV",
+        "version": "2.0.0"
+    },
+    {
+        "filename": "MoogsNetherStructures-1.21-2.0.31.jar",
+        "name": "MoogsNetherStructures",
+        "url": "https://modrinth.com/mod/nGUXvjTa",
+        "version": "2.0.31"
+    },
+    {
+        "filename": "MoogsSoaringStructures-1.21-2.0.2.jar",
+        "name": "MoogsSoaringStructures",
+        "url": "https://modrinth.com/mod/RJCLIx7k",
+        "version": "2.0.2"
+    },
+    {
+        "filename": "MoogsVoyagerStructures-1.21-5.0.5.jar",
+        "name": "MoogsVoyagerStructures",
+        "url": "https://modrinth.com/mod/OQAgZMH1",
+        "version": "5.0.5"
+    },
+    {
+        "filename": "more_armor_trims-1.5.3-1.21.5.jar",
+        "name": "More Armor Trims",
+        "url": "https://modrinth.com/mod/FGNYBAJ6",
+        "version": "1.5.3-1.21.5"
+    },
+    {
+        "filename": "MouseTweaks-fabric-mc1.21.9-2.29.jar",
+        "name": "Mouse Tweaks",
+        "url": "https://modrinth.com/mod/aC3cM3Vq",
+        "version": "2.29"
+    },
+    {
+        "filename": "mythic_mounts-1.0V.jar",
+        "name": "Mythic Mounts",
+        "url": "https://modrinth.com/mod/vDBg3dpI",
+        "version": "1.0V"
+    },
+    {
+        "filename": "naturallychargedcreepers-1.21.10-3.6.jar",
+        "name": "Naturally Charged Creepers",
+        "url": "https://modrinth.com/mod/j5LquiGA",
+        "version": "3.6"
+    },
+    {
+        "filename": "NaturesCompass-1.21.10-2.2.9-fabric.jar",
+        "name": "Nature's Compass",
+        "url": "https://modrinth.com/mod/fPetb5Kh",
+        "version": "1.21.10-2.2.9-fabric"
+    },
+    {
+        "filename": "neruina-3.2.2+1.21.10-fabric.jar",
+        "name": "Neruina",
+        "url": "https://modrinth.com/mod/1s5x833P",
+        "version": "3.2.2"
+    },
+    {
+        "filename": "NoChatReports-FABRIC-1.21.10-v2.16.0.jar",
+        "name": "No Chat Reports",
+        "url": "https://modrinth.com/mod/qQyHxfxd",
+        "version": "1.21.10-v2.16.0"
+    },
+    {
+        "filename": "nofeathertrample-1.21.10-1.3.jar",
+        "name": "No Feather Trample",
+        "url": "https://modrinth.com/mod/VmGOLJeH",
+        "version": "1.3"
+    },
+    {
+        "filename": "no-resource-pack-warnings-1.4.0.jar",
+        "name": "No Resource Pack Warnings",
+        "url": "https://modrinth.com/mod/6xKUDQcB",
+        "version": "1.4.0"
+    },
+    {
+        "filename": "no-telemetry-1.10.0.jar",
+        "name": "No Telemetry",
+        "url": "https://modrinth.com/mod/hg77g4Pw",
+        "version": "1.10.0"
+    },
+    {
+        "filename": "noconsolespam-1.8.jar",
+        "name": "NoConsoleSpam",
+        "url": "https://modrinth.com/mod/c4YY0EJn",
+        "version": "1.8"
+    },
+    {
+        "filename": "NE-1.21.10-1.10.2.jar",
+        "name": "NoExpensive",
+        "url": "https://modrinth.com/mod/2nz0kJ1N",
+        "version": "1.21.10-1.10.2"
+    },
+    {
+        "filename": "notenoughanimations-fabric-1.11.3-mc1.21.10.jar",
+        "name": "NotEnoughAnimations",
+        "url": "https://modrinth.com/mod/MPCX6s5C",
+        "version": "1.11.3"
+    },
+    {
+        "filename": "OverflowingBars-v21.10.1+mc1.21.10-Fabric.jar",
+        "name": "Overflowing Bars",
+        "url": "https://modrinth.com/mod/XD7XOrAF",
+        "version": "21.10.1"
+    },
+    {
+        "filename": "packetfixer-fabric-3.3.4-1.21.10.jar",
+        "name": "Packet Fixer",
+        "url": "https://modrinth.com/mod/c7m1mi73",
+        "version": "3.3.4"
+    },
+    {
+        "filename": "particle_core-0.3.2+1.21.9.jar",
+        "name": "Particle Core",
+        "url": "https://modrinth.com/mod/RSeLon5O",
+        "version": "0.3.2+1.21.9"
+    },
+    {
+        "filename": "particlerain-4.0.0-beta.5+1.21.9-fabric.jar",
+        "name": "Particle Rain",
+        "url": "https://modrinth.com/mod/nrikgvxm",
+        "version": "4.0.0-beta.5"
+    },
+    {
+        "filename": "placeholder-api-2.8.2+1.21.10.jar",
+        "name": "Placeholder API",
+        "url": "https://modrinth.com/mod/eXts2L7r",
+        "version": "2.8.2+1.21.10"
+    },
+    {
+        "filename": "polymorph-fabric-1.2.1+1.21.10.jar",
+        "name": "Polymorph",
+        "url": "https://modrinth.com/mod/KTZoLgc9",
+        "version": "1.2.1+1.21.10"
+    },
+    {
+        "filename": "prickle-fabric-1.21.10-21.10.2.jar",
+        "name": "PrickleMC",
+        "url": "https://modrinth.com/mod/aaRl8GiW",
+        "version": "21.10.2"
+    },
+    {
+        "filename": "PuzzlesLib-v21.10.8+mc1.21.10-Fabric.jar",
+        "name": "Puzzles Lib",
+        "url": "https://modrinth.com/mod/QAGBst4M",
+        "version": "21.10.8"
+    },
+    {
+        "filename": "raised-fabric-1.21.10-5.1.2.jar",
+        "name": "Raised",
+        "url": "https://modrinth.com/mod/nCQRBEiR",
+        "version": "5.1.2"
+    },
+    {
+        "filename": "reeses-sodium-options-fabric-1.8.6+mc1.21.10.jar",
+        "name": "Reese's Sodium Options",
+        "url": "https://modrinth.com/mod/Bh37bMuy",
+        "version": "1.8.6+mc1.21.10"
+    },
+    {
+        "filename": "reinforced-shulker-boxes-3.4.4-alpha+1.21.10.jar",
+        "name": "Reinforced Shulker Boxes",
+        "url": "https://modrinth.com/mod/xlOwuSdN",
+        "version": "3.4.4-alpha+1.21.10"
+    },
+    {
+        "filename": "rrls-5.1.12+mc1.21.9-fabric.jar",
+        "name": "Remove Reloading Screen",
+        "url": "https://modrinth.com/mod/ZP7xHXtw",
+        "version": "5.1.12+mc1.21.9-fabric"
+    },
+    {
+        "filename": "ResourcefulLib-fabric-1.21.9-3.9.1.jar",
+        "name": "Resourceful Lib",
+        "url": "https://modrinth.com/mod/G1hIVOrD",
+        "version": "3.9.1"
+    },
+    {
+        "filename": "ResourcefulConfig-fabric-1.21.9-3.9.1.jar",
+        "name": "Resourcefulconfig",
+        "url": "https://modrinth.com/mod/M1953qlQ",
+        "version": "3.9.1"
+    },
+    {
+        "filename": "Revamped Shipwrecks 1.1.0.jar",
+        "name": "Revamped Shipwrecks",
+        "url": "https://modrinth.com/mod/ZnZ8uqXN",
+        "version": "1.1.0"
+    },
+    {
+        "filename": "RoughlyEnoughItems-21.9.813-fabric.jar",
+        "name": "Roughly Enough Items",
+        "url": "https://modrinth.com/mod/nfn13YXA",
+        "version": "21.9.813"
+    },
+    {
+        "filename": "scaffoldingdropsnearby-1.21.10-3.4.jar",
+        "name": "Scaffolding Drops Nearby",
+        "url": "https://modrinth.com/mod/uO522mgw",
+        "version": "3.4"
+    },
+    {
+        "filename": "ScalableLux-0.1.6+fabric.c25518a-all.jar",
+        "name": "ScalableLux",
+        "url": "https://modrinth.com/mod/Ps1zyz6x",
+        "version": "0.1.6+fabric.c25518a"
+    },
+    {
+        "filename": "scorchful-0.16.4+1.21.10.jar",
+        "name": "Scorchful",
+        "url": "https://modrinth.com/mod/SZQ5qcdn",
+        "version": "0.16.4+1.21.10"
+    },
+    {
+        "filename": "Searchables-fabric-1.21.10-1.0.2.jar",
+        "name": "Searchables",
+        "url": "https://modrinth.com/mod/fuuu3xnx",
+        "version": "1.0.2"
+    },
+    {
+        "filename": "SereneSeasons-fabric-1.21.10-21.10.0.0.jar",
+        "name": "SereneSeasons",
+        "url": "https://modrinth.com/mod/e0bNACJD",
+        "version": "21.10.0.0"
+    },
+    {
+        "filename": "servercore-fabric-1.5.14+1.21.9.jar",
+        "name": "ServerCore",
+        "url": "https://modrinth.com/mod/4WWQxlQP",
+        "version": "1.5.14+1.21.9"
+    },
+    {
+        "filename": "servux-fabric-1.21.10-0.8.5.jar",
+        "name": "Servux",
+        "url": "https://modrinth.com/mod/zQhsx8KF",
+        "version": "0.8.5"
+    },
+    {
+        "filename": "shulkerboxtooltip-fabric-5.2.13+1.21.10.jar",
+        "name": "Shulker Box Tooltip",
+        "url": "https://modrinth.com/mod/2M01OLQq",
+        "version": "5.2.13+1.21.10"
+    },
+    {
+        "filename": "silkiertouch-1.21.10-1.1.jar",
+        "name": "Silkier Touch",
+        "url": "https://modrinth.com/mod/dUaXeoyM",
+        "version": "1.1"
+    },
+    {
+        "filename": "smallernetherportals-1.21.10-4.0.jar",
+        "name": "Smaller Nether Portals",
+        "url": "https://modrinth.com/mod/fYAofsi6",
+        "version": "4.0"
+    },
+    {
+        "filename": "SnowUnderTrees-2.7.4+1.21.9.jar",
+        "name": "Snow Under Trees",
+        "url": "https://modrinth.com/mod/XVnUIUAQ",
+        "version": "2.7.4+1.21.9"
+    },
+    {
+        "filename": "sodium-fabric-0.7.3+mc1.21.10.jar",
+        "name": "Sodium",
+        "url": "https://modrinth.com/mod/AANobbMI",
+        "version": "0.7.3+mc1.21.10"
+    },
+    {
+        "filename": "sodium-extra-fabric-0.7.1+mc1.21.10.jar",
+        "name": "Sodium Extra",
+        "url": "https://modrinth.com/mod/PtjYWJkn",
+        "version": "0.7.1+mc1.21.10"
+    },
+    {
+        "filename": "sodium-shadowy-path-blocks-fabric-5.0.1.jar",
+        "name": "Sodium Shadowy Path Blocks",
+        "url": "https://modrinth.com/mod/EIa1eiMm",
+        "version": "5.0.1"
+    },
+    {
+        "filename": "sound-physics-remastered-fabric-1.21.10-1.5.1.jar",
+        "name": "Sound Physics Remastered",
+        "url": "https://modrinth.com/mod/qyVF9oeo",
+        "version": "1.21.10-1.5.1"
+    },
+    {
+        "filename": "StackDeobfuscatorFabric-1.4.3+08e71cc.jar",
+        "name": "StackDeobfuscator",
+        "url": "https://modrinth.com/mod/NusMqsjF",
+        "version": "1.4.3+08e71cc"
+    },
+    {
+        "filename": "status-effect-bars-1.0.9.jar",
+        "name": "Status Effect Bars",
+        "url": "https://modrinth.com/mod/x02cBj9Y",
+        "version": "1.0.9"
+    },
+    {
+        "filename": "structure_layout_optimizer-1.1.4+1.21.9-fabric.jar",
+        "name": "Structure Layout Optimizer",
+        "url": "https://modrinth.com/mod/ayPU0OHc",
+        "version": "1.1.4+1.21.9-fabric"
+    },
+    {
+        "filename": "substrate-4.2+1.21.10-fabric.jar",
+        "name": "Substrate",
+        "url": "https://modrinth.com/mod/zNuzb72d",
+        "version": "4.2"
+    },
+    {
+        "filename": "TaxFreeLevels-1.4.10-fabric-1.21.5.jar",
+        "name": "Tax Free Levels",
+        "url": "https://modrinth.com/mod/jCBrrLTs",
+        "version": "1.4.10"
+    },
+    {
+        "filename": "thermoo-8.1.1.jar",
+        "name": "Thermoo",
+        "url": "https://modrinth.com/mod/9TbXlAut",
+        "version": "8.1.1"
+    },
+    {
+        "filename": "thermoo-patches-3.8.1.jar",
+        "name": "Thermoo Patches",
+        "url": "https://modrinth.com/mod/TYRF9nUy",
+        "version": "3.8.1"
+    },
+    {
+        "filename": "threadtweak-fabric-0.1.8+mc1.21.11.jar",
+        "name": "ThreadTweak",
+        "url": "https://modrinth.com/mod/vSEH1ERy",
+        "version": "0.1.8+mc1.21.11"
+    },
+    {
+        "filename": "toms_storage_fabric-1.21.10-2.7.0.jar",
+        "name": "Tom's Simple Storage Mod",
+        "url": "https://modrinth.com/mod/XZNI4Cpy",
+        "version": "2.7.0"
+    },
+    {
+        "filename": "t_and_t-fabric-neoforge-1.13.7.jar",
+        "name": "Towns and Towers",
+        "url": "https://modrinth.com/mod/DjLobEOy",
+        "version": "1.13.7"
+    },
+    {
+        "filename": "trade-cycling-fabric-1.21.10-1.0.20.jar",
+        "name": "Trade Cycling",
+        "url": "https://modrinth.com/mod/qpPoAL6m",
+        "version": "1.21.10-1.0.20"
+    },
+    {
+        "filename": "trimica-1.4.4+1.21.10-fabric.jar",
+        "name": "Trimica",
+        "url": "https://modrinth.com/mod/QWVeKieD",
+        "version": "1.4.4"
+    },
+    {
+        "filename": "tweakermore-v3.29.1-mc1.21.10.jar",
+        "name": "TweakerMore",
+        "url": "https://modrinth.com/mod/GBeCx05I",
+        "version": "3.29.1"
+    },
+    {
+        "filename": "tweakeroo-fabric-1.21.10-0.26.5.jar",
+        "name": "Tweakeroo",
+        "url": "https://modrinth.com/mod/t5wuYk45",
+        "version": "0.26.5"
+    },
+    {
+        "filename": "undergroundbeacons-1.21.10-1.0.jar",
+        "name": "Underground Beacons",
+        "url": "https://modrinth.com/mod/SMC0xf5E",
+        "version": "1.0"
+    },
+    {
+        "filename": "underwaterenchanting-1.21.10-2.9.jar",
+        "name": "Underwater Enchanting",
+        "url": "https://modrinth.com/mod/e8JtTY4h",
+        "version": "2.9"
+    },
+    {
+        "filename": "underwater-swim-fix-1.0.2.jar",
+        "name": "Underwater Swim Fix",
+        "url": "https://modrinth.com/mod/GsElPB9F",
+        "version": "1.0.2"
+    },
+    {
+        "filename": "Unwrecked Ships Plus 2.0.6.jar",
+        "name": "Unwrecked Ships - Plus",
+        "url": "https://modrinth.com/mod/ae8EZLiC",
+        "version": "2.0.6"
+    },
+    {
+        "filename": "Vertigo-1.1.7-MC1.21.10.jar",
+        "name": "Vertigo",
+        "url": "https://modrinth.com/mod/4LzgJp1j",
+        "version": "1.1.7"
+    },
+    {
+        "filename": "visuality-0.7.11+1.21.9.jar",
+        "name": "Visuality",
+        "url": "https://modrinth.com/mod/rI0hvYcd",
+        "version": "0.7.11+1.21.9"
+    },
+    {
+        "filename": "voxy-0.2.9-alpha-1.21.10.jar",
+        "name": "Voxy",
+        "url": "https://modrinth.com/mod/fxxUqruK",
+        "version": "0.2.9-alpha"
+    },
+    {
+        "filename": "walkablerails-1.0.0+1.21.1-fabric.jar",
+        "name": "WalkableRails",
+        "url": "https://modrinth.com/mod/iQK4D5yO",
+        "version": "1.0.0"
+    },
+    {
+        "filename": "xaerominimap-fabric-1.21.10-25.3.10.jar",
+        "name": "Xaero's Minimap",
+        "url": "https://modrinth.com/mod/1bokaNcj",
+        "version": "25.3.10"
+    },
+    {
+        "filename": "xaeroworldmap-fabric-1.21.10-1.40.11.jar",
+        "name": "Xaero's World Map",
+        "url": "https://modrinth.com/mod/NcUtCpym",
+        "version": "1.40.11"
+    },
+    {
+        "filename": "XaeroZoomout-Fabric-1.21-2.0.0.jar",
+        "name": "XaeroZoomout",
+        "url": "https://modrinth.com/mod/T6oqPfxF",
+        "version": "2.0.0"
+    },
+    {
+        "filename": "yosbr-0.1.2.jar",
+        "name": "YOSBR",
+        "url": "https://modrinth.com/mod/WwbubTsV",
+        "version": "0.1.2"
+    },
+    {
+        "filename": "yeetusexperimentus-fabric-87.0.0.jar",
+        "name": "Yeetus Experimentus",
+        "url": "https://modrinth.com/mod/HaaH232J",
+        "version": "87.0.0"
+    },
+    {
+        "filename": "yet_another_config_lib_v3-3.8.2+1.21.10-fabric.jar",
+        "name": "YetAnotherConfigLib",
+        "url": "https://modrinth.com/mod/1eAoo2KR",
+        "version": "3.8.2+1.21.10-fabric"
+    },
+    {
+        "filename": "zoomify-2.15.2+1.21.9.jar",
+        "name": "Zoomify",
+        "url": "https://modrinth.com/mod/w7ThoJFB",
+        "version": "2.15.2+1.21.9"
+    },
+    {
+        "filename": "LazyDFU-[UNOFFICIAL]-1.21.10.jar",
+        "name": "lazyDFU [UNOFFICIAL PORT]",
+        "url": "https://modrinth.com/mod/OmQzuQFa",
+        "version": "0"
+    },
+    {
+        "filename": "libIPN-fabric-1.21.10-6.6.2.jar",
+        "name": "libIPN",
+        "url": "https://modrinth.com/mod/onSQdWhM",
+        "version": "6.6.2"
+    },
+    {
+        "filename": "owo-lib-0.12.24+1.21.9.jar",
+        "name": "oωo",
+        "url": "https://modrinth.com/mod/ccKDOlHs",
+        "version": "0.12.24+1.21.9"
+    },
+    {
+        "filename": "spark-1.10.152-fabric.jar",
+        "name": "spark",
+        "url": "https://modrinth.com/mod/l6YH9Als",
+        "version": "1.10.152"
+    }
+]
