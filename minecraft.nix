@@ -38,7 +38,7 @@ in {
     servers.fabric = {
       enable = true;
       autoStart = true;
-      package = pkgs.fabricServers.fabric-1_21_10.override {
+      package = pkgs.fabricServers.fabric-1_21_1.override {
         loaderVersion = "0.18.4";
       };
       restart = "always";
