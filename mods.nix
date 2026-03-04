@@ -592,6 +592,7 @@
     (pkgs.runCommand "Big-Globe---MSS-Compat-1.0.3.zip" {} "cp ${./datapacks/Big-Globe---MSS-Compat-1.0.3.zip} $out")
     (pkgs.runCommand "Big-Globe---MVS-Compat-1.1.5.zip" {} "cp ${./datapacks/Big-Globe---MVS-Compat-1.1.5.zip} $out")
     (pkgs.runCommand "Big-Globe---RareSky-1.1.zip" {} "cp ${./datapacks/Big-Globe---RareSky-1.1.zip} $out")
+    (pkgs.runCommand "Create-Big-Globe-Compatibility_1.21.x.zip" {} "cp ${./datapacks/Create-Big-Globe-Compatibility_1.21.x.zip} $out")
     (pkgs.runCommand "bigglobe_antiquetradingship.zip" {} "cp ${./datapacks/bigglobe_antiquetradingship.zip} $out")
     (pkgs.runCommand "bigglobe_explorify.zip" {} "cp ${./datapacks/bigglobe_explorify.zip} $out")
     (pkgs.runCommand "bigglobe_remove_abandonedcity.zip" {} "cp ${./datapacks/bigglobe_remove_abandonedcity.zip} $out")
@@ -600,7 +601,6 @@
     (pkgs.runCommand "bigglobe_takespillage.zip" {} "cp ${./datapacks/bigglobe_takespillage.zip} $out")
     (pkgs.runCommand "bigglobe_towns_and_towers_compatibility.zip" {} "cp ${./datapacks/bigglobe_towns_and_towers_compatibility.zip} $out")
     (pkgs.runCommand "bigglobe_unwrecked_ships.zip" {} "cp ${./datapacks/bigglobe_unwrecked_ships.zip} $out")
-    (pkgs.runCommand "Create-Big-Globe-Compatibility_1.21.x.zip" {} "cp ${./datapacks/Create-Big-Globe-Compatibility_1.21.x.zip} $out")
   ];
 in {
   options.minecraftMods = {
