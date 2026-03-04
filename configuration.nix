@@ -41,10 +41,10 @@
   };
 
   networking = {
+    networkmanager.enable = true;
+
     nftables.enable = true;
     firewall.enable = false;
-
-    nameservers = ["1.1.1.1" "8.8.8.8"];
   };
 
   #   - Minecraft port 25565  → only from local subnet 192.168.1.0/24
@@ -171,4 +171,5 @@
   };
 
   nixpkgs.config.allowUnfree = true;
+  hardware.enableRedistributableFirmware = true;
 }
