@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# ── Argument parsing ──────────────────────────────────────────────────────────
-
 DRY_RUN=false
 MRPACK_PATH=""
 
@@ -10,239 +8,120 @@ for arg in "$@"; do
   case "$arg" in
   --dry-run) DRY_RUN=true ;;
   --help | -h)
-    sed -n '2,/^$/p' "$0" | grep '^#' | sed 's/^# \?//'
+    printf "Usage: %s [--dry-run] [server.mrpack]\n" "$0"
     exit 0
     ;;
-  -*)
-    echo "Unknown flag: $arg" >&2
-    exit 1
-    ;;
-  *)
-    if [[ -n "$MRPACK_PATH" ]]; then
-      echo "Error: unexpected argument '$arg'" >&2
-      exit 1
-    fi
-    MRPACK_PATH="$arg"
-    ;;
+  -*) exit 1 ;;
+  *) MRPACK_PATH="$arg" ;;
   esac
 done
 
 MRPACK_PATH="${MRPACK_PATH:-server.mrpack}"
 MRPACK_PATH="$(realpath "$MRPACK_PATH")"
-
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 OUTPUT_FILE="$REPO_ROOT/mods.nix"
 DATAPACKS_DIR="$REPO_ROOT/datapacks"
 
-# ── Validation ────────────────────────────────────────────────────────────────
-
 if [[ ! -f "$MRPACK_PATH" ]]; then
-  echo "Error: .mrpack file not found: $MRPACK_PATH" >&2
-  echo "Usage: bash scripts/mrpack-to-nix.sh [--dry-run] [server.mrpack]" >&2
+  printf "Error: %s not found\n" "$MRPACK_PATH" >&2
   exit 1
 fi
 
-for cmd in jq unzip; do
+for cmd in jq unzip curl column alejandra; do
   if ! command -v "$cmd" &>/dev/null; then
-    echo "Error: '$cmd' is required but not found. Run 'nix develop' first." >&2
+    printf "Error: %s is required\n" "$cmd" >&2
     exit 1
   fi
 done
 
-# ── Extract .mrpack ───────────────────────────────────────────────────────────
-
 TMPDIR="$(mktemp -d)"
 trap 'rm -rf "$TMPDIR"' EXIT
 
-echo "Extracting $MRPACK_PATH ..." >&2
 unzip -q "$MRPACK_PATH" -d "$TMPDIR"
-
 INDEX_FILE="$TMPDIR/modrinth.index.json"
-if [[ ! -f "$INDEX_FILE" ]]; then
-  echo "Error: modrinth.index.json not found inside $MRPACK_PATH" >&2
-  exit 1
-fi
 
-# ── Read metadata ─────────────────────────────────────────────────────────────
-
-PACK_NAME="$(jq -r '.name // "Unknown Pack"' "$INDEX_FILE")"
+PACK_NAME="$(jq -r '.name // "Unknown"' "$INDEX_FILE")"
 PACK_VERSION="$(jq -r '.versionId // "unknown"' "$INDEX_FILE")"
 MC_VERSION="$(jq -r '.dependencies.minecraft // "unknown"' "$INDEX_FILE")"
 FABRIC_VERSION="$(jq -r '.dependencies["fabric-loader"] // "unknown"' "$INDEX_FILE")"
 
-echo "Pack: $PACK_NAME v$PACK_VERSION (MC $MC_VERSION, Fabric $FABRIC_VERSION)" >&2
+printf "Pack: %s v%s (MC %s, Fabric %s)\n" "$PACK_NAME" "$PACK_VERSION" "$MC_VERSION" "$FABRIC_VERSION" >&2
 
-# ── Process Modrinth-hosted mods ─────────────────────────────────────────────
+USER_AGENT="nixos-minecraft-mrpack-to-nix/1.0.0"
+ALL_MODS_JSON="$(jq -c '[ .files[] | select(.path | startswith("mods/")) ]' "$INDEX_FILE")"
+HASHES_JSON="$(echo "$ALL_MODS_JSON" | jq -c '[ .[].hashes.sha512 ]')"
 
-MODS_JSON="$(jq -c '
-  [ .files[]
-    | select(
-        (.path | startswith("mods/")) and
-        (.env.server // "required") != "unsupported"
-      )
-    | {
-        name: (.path | split("/") | last),
-        url:  .downloads[0],
-        sha512: .hashes.sha512
-      }
-  ]
-' "$INDEX_FILE")"
+printf "API: Fetching metadata... " >&2
+VERSION_INFO="$(curl -s -f -A "$USER_AGENT" -X POST "https://api.modrinth.com/v2/version_files" \
+  -H "Content-Type: application/json" -d "{\"hashes\": $HASHES_JSON, \"algorithm\": \"sha512\"}")"
 
-MOD_COUNT="$(echo "$MODS_JSON" | jq 'length')"
+PROJECT_IDS="$(echo "$VERSION_INFO" | jq -c '[ .[] | .project_id ] | unique')"
+ENCODED_IDS="$(echo "$PROJECT_IDS" | jq -sRr @uri | tr -d '\n')"
+PROJECTS_INFO="$(curl -s -f -A "$USER_AGENT" -X GET "https://api.modrinth.com/v2/projects?ids=$ENCODED_IDS")"
+printf "Done\n" >&2
 
-INDEX_DATAPACKS_JSON="$(jq -c '
-  [ .files[]
-    | select(.path | startswith("datapacks/"))
-    | {
-        name: (.path | split("/") | last),
-        url:  .downloads[0],
-        sha512: .hashes.sha512
-      }
-  ]
-' "$INDEX_FILE")"
+SS_MAP="$TMPDIR/ss.json"
+H2P_MAP="$TMPDIR/h2p.json"
+echo "$PROJECTS_INFO" | jq -c '[ .[] | {key: .id, value: .server_side} ] | from_entries' > "$SS_MAP"
+echo "$VERSION_INFO" | jq -c 'map_values(.project_id)' > "$H2P_MAP"
 
-INDEX_DATAPACK_COUNT="$(echo "$INDEX_DATAPACKS_JSON" | jq 'length')"
+PROCESSED="$(echo "$ALL_MODS_JSON" | jq -c --slurpfile ss "$SS_MAP" --slurpfile h2p "$H2P_MAP" '
+  [ .[] | .hash = .hashes.sha512 | .pid = $h2p[0][.hash] | .ss = $ss[0][.pid] ]')"
 
-SKIPPED_COUNT="$(jq -r '[ .files[] | select((.path | startswith("mods/")) and (.env.server == "unsupported")) ] | length' "$INDEX_FILE")"
+MODS="$(echo "$PROCESSED" | jq -c '[ .[] | select(.ss != "unsupported") | {name: (.path | split("/") | last), url: .downloads[0], sha512: .hash} ]')"
+SKIPPED="$(echo "$PROCESSED" | jq -r '.[] | select(.ss == "unsupported") | (.path | split("/") | last)')"
 
-echo "  Server-side mods (Modrinth CDN): $MOD_COUNT" >&2
-if [[ "$SKIPPED_COUNT" -gt 0 ]]; then
-  SKIPPED_NAMES="$(jq -r '[ .files[] | select((.path | startswith("mods/")) and (.env.server == "unsupported")) | (.path | split("/") | last) ] | join(", ")' "$INDEX_FILE")"
-  echo "  Skipped (client-only): $SKIPPED_COUNT — $SKIPPED_NAMES" >&2
-fi
+INDEX_DPS="$(jq -c '[ .files[] | select(.path | startswith("datapacks/")) | {name: (.path | split("/") | last), url: .downloads[0], sha512: .hashes.sha512} ]' "$INDEX_FILE")"
 
-# ── Process local override datapacks ─────────────────────────────────────────
-
-OVERRIDE_DATAPACKS_DIR="$TMPDIR/overrides/datapacks"
-LOCAL_DATAPACK_NAMES=()
-TOTAL_DATAPACK_COUNT=0
-
-if [[ -d "$OVERRIDE_DATAPACKS_DIR" ]]; then
+OVERRIDE_DPS_DIR="$TMPDIR/overrides/datapacks"
+LOCAL_DPS=()
+if [[ -d "$OVERRIDE_DPS_DIR" ]]; then
   mkdir -p "$DATAPACKS_DIR"
-
-  sanitize_fname() {
-    echo "$1" | tr ' ' '-' | tr "'" '-'
-  }
-
-  if [[ "$DRY_RUN" == "false" ]]; then
-    EXPECTED_FNAMES=""
-    for dp in "$OVERRIDE_DATAPACKS_DIR"/*; do
-      [[ -f "$dp" ]] || continue
-      safe_fname="$(sanitize_fname "$(basename "$dp")")"
-      EXPECTED_FNAMES="$EXPECTED_FNAMES $safe_fname "
-    done
-
-    for existing in "$DATAPACKS_DIR"/*; do
-      [[ -f "$existing" ]] || continue
-      safe_existing="$(basename "$existing")"
-      if [[ "$EXPECTED_FNAMES" != *" $safe_existing "* ]]; then
-        echo "  Removing stale datapack: $safe_existing" >&2
-        rm -f "$existing"
-      fi
-    done
-
-    for dp in "$OVERRIDE_DATAPACKS_DIR"/*; do
-      [[ -f "$dp" ]] || continue
-      orig_fname="$(basename "$dp")"
-      safe_fname="$(sanitize_fname "$orig_fname")"
-      cp -f "$dp" "$DATAPACKS_DIR/$safe_fname"
-      LOCAL_DATAPACK_NAMES+=("$safe_fname")
-      if [[ "$orig_fname" != "$safe_fname" ]]; then
-        echo "  Datapack: $orig_fname → $safe_fname" >&2
-      else
-        echo "  Datapack: $safe_fname" >&2
-      fi
-    done
-  else
-    for dp in "$OVERRIDE_DATAPACKS_DIR"/*; do
-      [[ -f "$dp" ]] || continue
-      LOCAL_DATAPACK_NAMES+=("$(sanitize_fname "$(basename "$dp")")")
-    done
-  fi
-
-  TOTAL_DATAPACK_COUNT=$((${#LOCAL_DATAPACK_NAMES[@]} + INDEX_DATAPACK_COUNT))
-  echo "  Local override datapacks: ${#LOCAL_DATAPACK_NAMES[@]}" >&2
-  [[ "$INDEX_DATAPACK_COUNT" -gt 0 ]] && echo "  Modrinth-CDN datapacks: $INDEX_DATAPACK_COUNT" >&2
+  for dp in "$OVERRIDE_DPS_DIR"/*; do
+    [[ -f "$dp" ]] || continue
+    FNAME="$(basename "$dp" | tr ' ' '-' | tr "'" '-')"
+    [[ "$DRY_RUN" == "false" ]] && cp -f "$dp" "$DATAPACKS_DIR/$FNAME"
+    LOCAL_DPS+=("$FNAME")
+  done
 fi
 
-echo "" >&2
+printf "\nSummary:\n" >&2
+printf "  Server Mods: %d\n" "$(echo "$MODS" | jq 'length')" >&2
+printf "  Datapacks:   %d\n" "$((${#LOCAL_DPS[@]} + $(echo "$INDEX_DPS" | jq 'length')))" >&2
 
-# ── Generate Nix entries ──────────────────────────────────────────────────────
-
-emit_fetchurl() {
-  local entry="$1"
-  local name url sha512 safe_name
-  name="$(echo "$entry" | jq -r '.name')"
-  url="$(echo "$entry" | jq -r '.url')"
-  sha512="$(echo "$entry" | jq -r '.sha512')"
-  safe_name="${name// /-}"
-  printf '    (pkgs.fetchurl {\n'
-  printf '      name   = "%s";\n' "$safe_name"
-  printf '      url    = "%s";\n' "$url"
-  printf '      sha512 = "%s";\n' "$sha512"
-  printf '    })\n'
-}
+if [[ -n "$SKIPPED" ]]; then
+  printf "\nSkipped (Client-only):\n" >&2
+  echo "$SKIPPED" | column | sed 's/^/  /' >&2
+fi
 
 MODS_BLOCK=""
 while IFS= read -r entry; do
-  MODS_BLOCK+="$(emit_fetchurl "$entry")"$'\n'
-done < <(echo "$MODS_JSON" | jq -c '.[]')
+  NAME="$(echo "$entry" | jq -r '.name' | tr ' ' '-')"
+  URL="$(echo "$entry" | jq -r '.url')"
+  SHA="$(echo "$entry" | jq -r '.sha512')"
+  MODS_BLOCK+="$(printf '    (pkgs.fetchurl { name = "%s"; url = "%s"; sha512 = "%s"; })\n' "$NAME" "$URL" "$SHA")"
+done < <(echo "$MODS" | jq -c '.[]')
 
-DATAPACKS_BLOCK=""
-
-# Fix: Local override datapacks wrapped in runCommand so they become valid derivations
-for fname in "${LOCAL_DATAPACK_NAMES[@]}"; do
-  DATAPACKS_BLOCK+="    (pkgs.runCommand \"${fname}\" {} ''cp \${./datapacks/${fname}} \$out'')"$'\n'
+DPS_BLOCK=""
+for f in "${LOCAL_DPS[@]}"; do
+  DPS_BLOCK+="$(printf '    (pkgs.runCommand "%s" {} "cp ${./datapacks/%s} $out")\n' "$f" "$f")"
 done
-
 while IFS= read -r entry; do
-  DATAPACKS_BLOCK+="$(emit_fetchurl "$entry")"$'\n'
-done < <(echo "$INDEX_DATAPACKS_JSON" | jq -c '.[]')
+  NAME="$(echo "$entry" | jq -r '.name' | tr ' ' '-')"
+  URL="$(echo "$entry" | jq -r '.url')"
+  SHA="$(echo "$entry" | jq -r '.sha512')"
+  DPS_BLOCK+="$(printf '    (pkgs.fetchurl { name = "%s"; url = "%s"; sha512 = "%s"; })\n' "$NAME" "$URL" "$SHA")"
+done < <(echo "$INDEX_DPS" | jq -c '.[]')
 
-# ── Assemble mods.nix ─────────────────────────────────────────────────────────
+RAW_NIX="$(printf "{ pkgs, lib, config, ... }:\nlet\n  mods = [\n%b  ];\n  datapacks = [\n%b  ];\nin {\n  options.minecraftMods = {\n    modsDrv = lib.mkOption { type = lib.types.package; };\n    datapacks = lib.mkOption { type = lib.types.package; };\n  };\n  config.minecraftMods = {\n    modsDrv = pkgs.linkFarmFromDrvs \"mods\" mods;\n    datapacks = pkgs.linkFarmFromDrvs \"datapacks\" datapacks;\n  };\n}" "$MODS_BLOCK" "$DPS_BLOCK")"
 
-TIMESTAMP="$(date -u '+%Y-%m-%dT%H:%M:%SZ')"
-
-NIX_CONTENT="# Auto-generated by scripts/mrpack-to-nix.sh — do not edit manually.
-# Source:    $PACK_NAME v$PACK_VERSION
-# Minecraft: $MC_VERSION
-# Fabric:    $FABRIC_VERSION
-# Generated: $TIMESTAMP
-
-{ pkgs, lib, config, ... }:
-
-let
-  mods = [
-${MODS_BLOCK}  ];
-
-  datapacks = [
-${DATAPACKS_BLOCK}  ];
-
-in {
-  options.minecraftMods = {
-    modsDrv = lib.mkOption {
-      type        = lib.types.package;
-      description = \"Link farm of all server-side mod JARs.\";
-    };
-    datapacks = lib.mkOption {
-      type        = lib.types.package;
-      description = \"Link farm of all datapack JARs/zips.\";
-    };
-  };
-
-  config.minecraftMods = {
-    modsDrv   = pkgs.linkFarmFromDrvs \"mods\"      mods;
-    datapacks = pkgs.linkFarmFromDrvs \"datapacks\" datapacks;
-  };
-}
-"
-
-# ── Output ────────────────────────────────────────────────────────────────────
+printf "\nFormatting... " >&2
+FORMATTED_NIX="$(echo "$RAW_NIX" | alejandra --quiet -)"
+printf "Done\n" >&2
 
 if [[ "$DRY_RUN" == "true" ]]; then
-  echo "$NIX_CONTENT"
+  printf "\nResult:\n%s\n" "$FORMATTED_NIX"
 else
-  echo "$NIX_CONTENT" >"$OUTPUT_FILE"
-  echo "Written to $OUTPUT_FILE" >&2
+  printf "%s\n" "$FORMATTED_NIX" > "$OUTPUT_FILE"
+  printf "\nOutput: %s\n" "$OUTPUT_FILE" >&2
 fi
