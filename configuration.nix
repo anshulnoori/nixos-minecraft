@@ -142,7 +142,15 @@
 
     iproute2
     tcpdump
+
+    (writeShellScriptBin "mc" (builtins.readFile ./scripts/mc.sh))
   ];
+
+  environment.shellAliases = {
+    mcc = "mc console";
+    mcs = "mc status";
+    mcl = "mc log";
+  };
 
   nix = {
     settings = {
@@ -178,8 +186,4 @@
 
   nixpkgs.config.allowUnfree = true;
   hardware.enableRedistributableFirmware = true;
-
-  environment.shellAliases = {
-    mcc = "sudo -u minecraft tmux -S /run/minecraft/fabric.sock attach";
-  };
 }
