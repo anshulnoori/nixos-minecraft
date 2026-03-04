@@ -806,11 +806,6 @@
       sha512 = "b0221075239b9998d08e9a42d7bb3205c22482dc39f4b62a1c57c1f7444c9ec9cdee4a245b6b9c6b23f61f3cec82056c40cfc09e6c1bc0690cd936dfed6393a1";
     })
     (pkgs.fetchurl {
-      name = "toms_storage_fabric-1.21-2.3.0.jar";
-      url = "https://cdn.modrinth.com/data/XZNI4Cpy/versions/GwLz79tK/toms_storage_fabric-1.21-2.3.0.jar";
-      sha512 = "e7bc2828cbf7cda7fa178c81d9f6935985c72fe44b3ccc33e383101c53f4964eb54c0a6e1b3a6a0e13466a30eb043bccd3021ede141b962ed211ddd2948daa2f";
-    })
-    (pkgs.fetchurl {
       name = "trade-cycling-fabric-1.21.1-1.0.20.jar";
       url = "https://cdn.modrinth.com/data/qpPoAL6m/versions/g1AEWhmh/trade-cycling-fabric-1.21.1-1.0.20.jar";
       sha512 = "0175ee505a1050bb0e97eee25197bd2f31665902f941aac7203cf06675484bf7312d1ea1ff9733f1504182833fb6891ea9c8a405a141343d0263d2a4286c30df";
