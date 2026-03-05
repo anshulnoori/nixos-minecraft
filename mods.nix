@@ -86,6 +86,11 @@
       sha512 = "577dbe0297510b582081db98101891d61827ffde5cec94d25b2893f77914f657337f9a43b10ade5a9ac138ae215c5297be3d7e9dc4377fc10b96a629e3f3cf90";
     })
     (pkgs.fetchurl {
+      name = "DistantHorizons-2.4.5-b-1.21.1-fabric-neoforge.jar";
+      url = "https://cdn.modrinth.com/data/uCdwusMi/versions/bLPLghy9/DistantHorizons-2.4.5-b-1.21.1-fabric-neoforge.jar";
+      sha512 = "6ee8b04af858450eac2e0fe6c3a6cb09dfc0f9c1691fb0f76f79bbc73e08e5dca6f18257294ba647b1520d4fb2110bbbb085830e536c8f4638995c75f66fe1eb";
+    })
+    (pkgs.fetchurl {
       name = "ExplorersCompass-1.21.1-2.2.5-fabric.jar";
       url = "https://cdn.modrinth.com/data/RV1qfVQ8/versions/i1WCJNIW/ExplorersCompass-1.21.1-2.2.5-fabric.jar";
       sha512 = "2aee404833e040b004cbd5b63c08c1fcf2f05046b1f73a83e89a471f96ff959d400f2450d0fdfaf6e35a476062cf61ff04745ebebf342debec07da524a2f791c";
@@ -511,9 +516,9 @@
       sha512 = "63717571a7295bbde43a4f0c2d207064a21d78c91a67bb25d166ebaa2edc49db96472ac64c982c102caa9bc9c9cf684a2b346e62def924ec79d89bee2651f3a6";
     })
     (pkgs.fetchurl {
-      name = "graves-3.4.4+1.21.jar";
-      url = "https://cdn.modrinth.com/data/yn9u3ypm/versions/Fg64B87Y/graves-3.4.4%2B1.21.jar";
-      sha512 = "a247df6557c4020ea5499a1be54d1b2a90b33fffcb94866bf682b40a6524708360ec4e1e912aa10754722761ccabcf3674bea1f82f5438f225eada983e59989a";
+      name = "gravestones-1.2.10+1.21+A.jar";
+      url = "https://cdn.modrinth.com/data/Heh3BbSv/versions/qht7ppsj/gravestones-1.2.10%2B1.21%2BA.jar";
+      sha512 = "cc5b6b371098d43c646e776fdf46a573466eb4c93ec581501b9ef3aa77775790e0e88a89d3533fa68d3bab60210738093d237d96314fbae665abb2af5ea29b5a";
     })
     (pkgs.fetchurl {
       name = "grind-enchantments-4.0.0+1.21.1.jar";
@@ -669,6 +674,11 @@
       name = "placeholder-api-2.4.2+1.21.jar";
       url = "https://cdn.modrinth.com/data/eXts2L7r/versions/U5bhVym2/placeholder-api-2.4.2%2B1.21.jar";
       sha512 = "fc13d3a5c048dbaab86318edaf8b6c6b46ef9f1d367e8f063d19f5a9b0da66c5ae419d92c8c4608edc89a01eb44d91ffcf017fea73f39b222cbd85e82f70a233";
+    })
+    (pkgs.fetchurl {
+      name = "pneumonocore-1.2.1+1.21+A.jar";
+      url = "https://cdn.modrinth.com/data/ZLKQjA7t/versions/QKvgjhTZ/pneumonocore-1.2.1%2B1.21%2BA.jar";
+      sha512 = "028e18a7ec6719f67b3d2e2d0c57d207ff7ddf0b048d64c2dfed127566283aaafc17d70927d1c30259d4990ce0c12d5c177c4f5bbc2285a9163c08e29b364c28";
     })
     (pkgs.fetchurl {
       name = "polymorph-fabric-1.1.0+1.21.1.jar";
@@ -864,6 +874,11 @@
       name = "yet_another_config_lib_v3-3.8.2+1.21.1-fabric.jar";
       url = "https://cdn.modrinth.com/data/1eAoo2KR/versions/o3cDn8Vp/yet_another_config_lib_v3-3.8.2%2B1.21.1-fabric.jar";
       sha512 = "353169f85fa63e73ce9bdd0d4ddce54e3cbc4d71153a93c982f74c68fd93325986663f94fc2f2b10f4427e8b15a0485c608c5587b3840d933204b50ea4cb6d4c";
+    })
+    (pkgs.fetchurl {
+      name = "yo_hooks-fabric-3.10.0.jar";
+      url = "https://cdn.modrinth.com/data/t1p8V2nl/versions/qheIB9EF/yo_hooks-fabric-3.10.0.jar";
+      sha512 = "ea8b8134853c1b81e9a522f243e32b2f217a4107a82baa28fceb9c9f3c1990ffcac72f0e5fab9995662d5b51d2ab8fc4ca385a47ec6faf1e323ca5110321dea7";
     })
     (pkgs.fetchurl {
       name = "your-reputation-0.2.9+jade.1.21.1.jar";
