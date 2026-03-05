@@ -456,6 +456,11 @@
       sha512 = "3ab30a424dc2f5c3bcb71d86ebffaa82767dd51710513bed2caa35574dd922a1f663357caeb5f4ce8e4392ad9518cafe79d281744b6c010612aef96f42eec094";
     })
     (pkgs.fetchurl {
+      name = "enchanter_fix-1.8+mc1.20-1.21.11.jar";
+      url = "https://cdn.modrinth.com/data/vNE5j3Te/versions/q98qlPBf/enchanter_fix-1.8%2Bmc1.20-1.21.11.jar";
+      sha512 = "dda91e85a0256dd1d12e4e304da3b818cbb791c6011bcabf4eb3e2c447ab28d099f29ab3a4a0866515d39d5138f10c915c1a2a53b89baa3b9b93847d138d61c8";
+    })
+    (pkgs.fetchurl {
       name = "ends_delight-2.5.2+refabricated.1.21.1.jar";
       url = "https://cdn.modrinth.com/data/yHN0njMr/versions/KOKpRenr/ends_delight-2.5.2%2Brefabricated.1.21.1.jar";
       sha512 = "8a5f8cc53e59a089705b79dd1146356560891d541a6d7817408a222f1b190c899b6c0fd019470c20b96941600395c4141f1e467924700f6032504851d8f24636";
