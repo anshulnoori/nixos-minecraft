@@ -49,11 +49,12 @@ in {
       serverProperties = {
         server-port = 25565;
         online-mode = true;
-        view-distance = 12;
+        view-distance = 8;
         simulation-distance = 8;
         max-players = 20;
         level-name = "world";
         # level-seed = "";
+        level-type = "bigglobe\\:bigglobe";
         difficulty = "hard";
         gamemode = "survival";
         allow-flight = true;
@@ -63,6 +64,8 @@ in {
         enforce-whitelist = false;
         enable-rcon = false;
         enable-query = false;
+        hide-online-players = true;
+        log-ips = false;
 
         motd = "\\u00A76Minecraft Server";
         max-world-size = 29999984;
