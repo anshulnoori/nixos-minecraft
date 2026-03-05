@@ -890,7 +890,6 @@
     (pkgs.runCommand "Big-Globe---MNS-Compat-1.0.3.zip" {} "cp ${./datapacks/Big-Globe---MNS-Compat-1.0.3.zip} $out")
     (pkgs.runCommand "Big-Globe---MSS-Compat-1.0.3.zip" {} "cp ${./datapacks/Big-Globe---MSS-Compat-1.0.3.zip} $out")
     (pkgs.runCommand "Big-Globe---MVS-Compat-1.1.5.zip" {} "cp ${./datapacks/Big-Globe---MVS-Compat-1.1.5.zip} $out")
-    (pkgs.runCommand "bigglobe-deeperdarker.zip" {} "cp ${./datapacks/bigglobe-deeperdarker.zip} $out")
     (pkgs.runCommand "bigglobe-vanillabackport-3.zip" {} "cp ${./datapacks/bigglobe-vanillabackport-3.zip} $out")
   ];
 in {
