@@ -66,6 +66,7 @@ in {
         enable-query = false;
         hide-online-players = true;
         log-ips = false;
+        max-tick-time = -1;
 
         motd = "\\u00A76Minecraft Server";
         max-world-size = 29999984;
