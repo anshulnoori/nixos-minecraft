@@ -151,6 +151,11 @@
       sha512 = "bc6f2a0590816e20a9df722181221e4e7769e64f9fe0efdb88666bae3443354ad59df95a0562f5a854cdc3d5d9a9c12448b605cc3b7fee51e61a85b397fd8f05";
     })
     (pkgs.fetchurl {
+      name = "MultiplayerServerPause-1.21-Fabric-1.3.3.jar";
+      url = "https://cdn.modrinth.com/data/RPXnAvtA/versions/6ZaJGDmk/MultiplayerServerPause-1.21-Fabric-1.3.3.jar";
+      sha512 = "78c04f3f80f8c4431a935f7365534283d966b67307ebc8d2c7ae066c9aefaeade582882abaee297c7ccf5e0ff6dc16bfbe5d4b8dcf7fff2d0818c5b15ed941e4";
+    })
+    (pkgs.fetchurl {
       name = "MyNethersDelight-1.21.1-2.0.3+1.7.8.refabricated.jar";
       url = "https://cdn.modrinth.com/data/uIOfYdnw/versions/sqEAS0LT/MyNethersDelight-1.21.1-2.0.3%2B1.7.8.refabricated.jar";
       sha512 = "3dc9cc9593b99195c20b52eeb5c298ee2d200b1d624320f3a7d1c32ff345b0d43589a438fbcf4b13765a352216161e45ad00ea09a8916e402a36f53d3eaa24ec";
@@ -531,6 +536,11 @@
       sha512 = "a91da389f01ae951db3c7d52835c85547bfdd5f488c9533ac95d669fa04b19c6ce0cc5374f28de6ae3ea089cba10f783f9ed1e16d0d4ba5fdbbdfb6a6182d0dc";
     })
     (pkgs.fetchurl {
+      name = "iChunUtil-1.21-Fabric-1.0.3.jar";
+      url = "https://cdn.modrinth.com/data/W6ROj0Hl/versions/gfAOoiwe/iChunUtil-1.21-Fabric-1.0.3.jar";
+      sha512 = "6aef7838146304010792a62aba34c466cb8605945ed59b1c2a873932020b26ee598c665abb295e36e186ae796832217f81b0b4dac76943a2da388ad519653b30";
+    })
+    (pkgs.fetchurl {
       name = "imfast-FABRIC-1.0.2.jar";
       url = "https://cdn.modrinth.com/data/PaUMOeP0/versions/xNGfkEBd/imfast-FABRIC-1.0.2.jar";
       sha512 = "dc3867c9ff9bd1769aefa68c6d515cb62691a82d07a93c85d997a62e3ef582a290b9fd61b3fc8c449857d496ac9dc4edf1bb511bccd5c3ae570ebdbce202f3a4";
@@ -766,7 +776,7 @@
       sha512 = "72c69678b6afc5ec48027f6e40f7421370dffa1483e23767e0b5f1b36581be652308b33864848e186845df9052f512b79698c69242adb297058cdc3357b64d60";
     })
     (pkgs.fetchurl {
-      name = "spark-1.10.109-fabric.jar.disabled";
+      name = "spark-1.10.109-fabric.jar";
       url = "https://cdn.modrinth.com/data/l6YH9Als/versions/cALUj9l1/spark-1.10.109-fabric.jar";
       sha512 = "367f574f6d28432067f09737577d799ced9c309c1725da1d09ffdfe10eacf461a66967205cc938131afbcc8b8255c8c25f8aa516e15f061c6481b6e7b8c94250";
     })
