@@ -291,11 +291,6 @@
       sha512 = "7a24a0481732c5504b07347d64a2843c10c29e748018af8e5f5844e5ea2f4517433886231025d823f90eb0b0271d1fa9849c27e7b0c81476c73753f79f19302a";
     })
     (pkgs.fetchurl {
-      name = "async-fabric-0.2.0+alpha-1.21.1.jar";
-      url = "https://cdn.modrinth.com/data/vEC2jm6I/versions/PhDCt4Jt/async-fabric-0.2.0%2Balpha-1.21.1.jar";
-      sha512 = "80dbd26d2082b3bd720f2610e18568d9c005215c66d6a920a76dd80ecc665203af53eb99f5c61ab9b2716f8ba33c94704b67597df3014240a9c7bf9e7562dd6c";
-    })
-    (pkgs.fetchurl {
       name = "attributefix-fabric-1.21.1-21.1.3.jar";
       url = "https://cdn.modrinth.com/data/lOOpEntO/versions/XwbErf6s/attributefix-fabric-1.21.1-21.1.3.jar";
       sha512 = "0ae9f64b9af206a506722cc11a900f75e8bb137cb9598c0f572ed1c3b993948fc47ebfec54cf0d66043901322c4a0caba220d9e953e0a6b68c244774d65088e5";
@@ -414,11 +409,6 @@
       name = "deeperdarker-fabric-1.21-1.3.3-plus-b.jar";
       url = "https://cdn.modrinth.com/data/fnAffV0n/versions/3MnQb3Tb/deeperdarker-fabric-1.21-1.3.3-plus-b.jar";
       sha512 = "e549ebb6a408ac852267a1175c00a01d722c6290754cac030221e2390ed8805caf24d29ede5f87e868ad741141a43dfc5e6be9e68dc7390b9669213fee032175";
-    })
-    (pkgs.fetchurl {
-      name = "dehydration-1.4.0.jar";
-      url = "https://cdn.modrinth.com/data/qWDh3G0p/versions/yjZs5qQj/dehydration-1.4.0.jar";
-      sha512 = "ab26003afba009a206aa891c18d68e197fbb5f13ba05b45009c3c340d909661830af3bdb39dc5f5c8a4557647bc0ea374d80bc2337f105db52a04dff20aabd46";
     })
     (pkgs.fetchurl {
       name = "dismountentity-1.21.1-3.6.jar";
