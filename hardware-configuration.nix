@@ -33,7 +33,7 @@
   hardware.nvidia = {
     open = false;
     modesetting.enable = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    package = config.boot.kernelPackages.nvidia_x11;
     powerManagement = {
       enable = true;
       finegrained = false;
@@ -41,6 +41,7 @@
 
     nvidiaSettings = false;
   };
+  services.xserver.videoDrivers = ["nvidia"];
 
   environment.variables = {
     "__NV_PRIME_RENDER_OFFLOAD" = "1";
