@@ -60,12 +60,14 @@
             nil
             alejandra
             util-linux
+            uv
+            python3
           ];
           shellHook = ''
             echo ""
             echo "  nixos-minecraft dev shell"
             echo "  ──────────────────────────────────────────────────────────────"
-            echo "  bash scripts/mrpack-to-nix.sh [--dry-run] [server.mrpack]"
+            echo "  uv run scripts/mrpack_to_nix.py [--dry-run] [server.mrpack]"
             echo "    Convert a .mrpack export to mods.nix (defaults to ./server.mrpack)"
             echo ""
             echo "  packwiz --help   — packwiz modpack CLI"

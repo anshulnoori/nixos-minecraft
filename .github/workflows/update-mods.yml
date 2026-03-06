@@ -56,10 +56,10 @@ jobs:
           fi
           echo "Found server.mrpack ($(du -h server.mrpack | cut -f1))"
 
-      - name: Run mrpack-to-nix.sh
+      - name: Run mrpack_to_nix.py
         run: |
-          # Run the conversion script inside the dev shell so jq/unzip are available
-          nix develop --command bash scripts/mrpack-to-nix.sh server.mrpack
+          # Run the conversion script inside the dev shell so uv/alejandra are available
+          nix develop --command uv run scripts/mrpack_to_nix.py server.mrpack
 
       - name: Check if mods.nix or datapacks/ changed
         id: check_changes

@@ -136,6 +136,11 @@
       sha512 = "f085627a6dd242bec916fc5dbec5694733f3a44e7826f51ba64887ae50860b5b6e9f89ceac4ca9beefee356c428211260ce4a40bee6bb136bfe636c42753c972";
     })
     (pkgs.fetchurl {
+      name = "MapDistanceFix-1.0.14+mc1.21-1.21.11.jar";
+      url = "https://cdn.modrinth.com/data/51BNNAng/versions/tpkUNnlX/MapDistanceFix-1.0.14%2Bmc1.21-1.21.11.jar";
+      sha512 = "ea935125ebcc599c64c5d5f03911d587222d3b1b46649f896d16ce5fda3e26a0643b277e74fbe434d73950be2518ed18d3360a0901b3c9e70b13141d5028ff10";
+    })
+    (pkgs.fetchurl {
       name = "MoogsEndStructures-1.21-2.0.1.jar";
       url = "https://cdn.modrinth.com/data/r4PuRGfV/versions/66xhbndk/MoogsEndStructures-1.21-2.0.1.jar";
       sha512 = "bc6ebffe094c53dc4cdb1a0f7938ec679bdd3da4f2c47867ccc9195270fe8499afee052616e22d28493da13a53a71b6f1c34c3f12a6a7a02806a026c3b3b6e2f";
@@ -531,6 +536,11 @@
       sha512 = "a6290f8b2a7546d4910389d619937f6e435f731cb206e23baf6888c690ae661d6bca62c26a4af37e26a1e89910c3a9a087ff7a50af27e0643759ad6b4691e263";
     })
     (pkgs.fetchurl {
+      name = "helium-1.6.1.jar";
+      url = "https://cdn.modrinth.com/data/dciNwIPV/versions/VNkjgc3Z/helium-1.6.1.jar";
+      sha512 = "3f2963a61ee7529393f204d4fe930c9cedd7a56a8c6e12726a05038199591c09ebe206d927258e1276407e06837bcc3b118dbddefba9e5ab594612dcaa237e95";
+    })
+    (pkgs.fetchurl {
       name = "horseman-fabric-1.21.1-1.5.9.jar";
       url = "https://cdn.modrinth.com/data/qIv5FhAA/versions/HgOnHXUH/horseman-fabric-1.21.1-1.5.9.jar";
       sha512 = "a91da389f01ae951db3c7d52835c85547bfdd5f488c9533ac95d669fa04b19c6ce0cc5374f28de6ae3ea089cba10f783f9ed1e16d0d4ba5fdbbdfb6a6182d0dc";
@@ -784,6 +794,11 @@
       name = "spark-1.10.109-fabric.jar";
       url = "https://cdn.modrinth.com/data/l6YH9Als/versions/cALUj9l1/spark-1.10.109-fabric.jar";
       sha512 = "367f574f6d28432067f09737577d799ced9c309c1725da1d09ffdfe10eacf461a66967205cc938131afbcc8b8255c8c25f8aa516e15f061c6481b6e7b8c94250";
+    })
+    (pkgs.fetchurl {
+      name = "ssdh-1.0.0.jar";
+      url = "https://cdn.modrinth.com/data/Zk33BG8E/versions/fFoLlBr8/ssdh-1.0.0.jar";
+      sha512 = "e7130f4042b75dc6ed6843d5645bc992ceebf6e67747e6c7bfd399cf887924bf0dd6e5e5945916ded17a0a082f3b37a3ffd886029436455d2d968c92ffc3c2ed";
     })
     (pkgs.fetchurl {
       name = "stonezone-1.21-2.11.11-fabric.jar";
