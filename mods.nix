@@ -101,11 +101,6 @@
       sha512 = "6ee8b04af858450eac2e0fe6c3a6cb09dfc0f9c1691fb0f76f79bbc73e08e5dca6f18257294ba647b1520d4fb2110bbbb085830e536c8f4638995c75f66fe1eb";
     })
     (pkgs.fetchurl {
-      name = "Enhanced-Cats-1.21-1.21.4-0.8.jar";
-      url = "https://cdn.modrinth.com/data/e2R0wxyL/versions/KKzNauET/Enhanced%20Cats-1.21-1.21.4-0.8.jar";
-      sha512 = "cd3a7302f13624a6f61e30bf506021b54232d81f6fcf3db4817e1e75e430955ae16a4a4854335a84c1c1af32c00fb90571623c904c829f50e663f41bc0fe35b7";
-    })
-    (pkgs.fetchurl {
       name = "ExplorersCompass-1.21.1-2.2.5-fabric.jar";
       url = "https://cdn.modrinth.com/data/RV1qfVQ8/versions/i1WCJNIW/ExplorersCompass-1.21.1-2.2.5-fabric.jar";
       sha512 = "2aee404833e040b004cbd5b63c08c1fcf2f05046b1f73a83e89a471f96ff959d400f2450d0fdfaf6e35a476062cf61ff04745ebebf342debec07da524a2f791c";
