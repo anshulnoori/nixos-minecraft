@@ -111,6 +111,11 @@
       sha512 = "0c9974c40c18ae33c1b088d0ffdc43c6ade9668a40b496cf3eca8b91147ece47e4d1e9d78d8dfe966955e1634a3119e9f4476012ab90fe57a2d335f006c0f773";
     })
     (pkgs.fetchurl {
+      name = "FastItemFrames-v21.1.6-1.21.1-Fabric.jar";
+      url = "https://cdn.modrinth.com/data/FsoeTIV0/versions/drSo3Q2h/FastItemFrames-v21.1.6-1.21.1-Fabric.jar";
+      sha512 = "c7371fe3337476c14dcd5d0686fdb6ed7b80e2d42c570117ee6fbf4e419252af355eb6f27e5217f8bf008955e771d498847f0c6058c05ab31ac98005e8ca09ea";
+    })
+    (pkgs.fetchurl {
       name = "ForgeConfigAPIPort-v21.1.6-1.21.1-Fabric.jar";
       url = "https://cdn.modrinth.com/data/ohNO6lps/versions/N5qzq0XV/ForgeConfigAPIPort-v21.1.6-1.21.1-Fabric.jar";
       sha512 = "cd9296e78ba969f7aed6e3692aa25eb61c102c79c55ca5f9592576bacaa26feab5d5d48fa30cf07ca852e0f1d42afc4d4558feff69a67b225183d2bc15898cf9";
@@ -511,6 +516,11 @@
       sha512 = "5fd8f2d54f6ba75ee9cbee4830187f4ce82871107c806869bf606d76d0ba3c28b532fa82eff7437ad3a79a61c0e7d3781c6b1d9120e57fd4f90d2cdecb1768f2";
     })
     (pkgs.fetchurl {
+      name = "fastback-0.20.0+1.21.1-fabric.jar";
+      url = "https://cdn.modrinth.com/data/ZHKrK8Rp/versions/Rhplybe8/fastback-0.20.0%2B1.21.1-fabric.jar";
+      sha512 = "08d746538ce7bbc78f90f264a27212820a8e3a8129bef8edeb91e3a816316734c630bfd0e5c32915c2727014ecc9751852121dce359ab03a2a1194d35df322d3";
+    })
+    (pkgs.fetchurl {
       name = "ferritecore-7.0.3-fabric.jar";
       url = "https://cdn.modrinth.com/data/uXXizFIs/versions/sOzRw3CG/ferritecore-7.0.3-fabric.jar";
       sha512 = "3ad31620fac4ff44327dc7dedbe162b2d978f3f246dc16255a6e400ce9592a0d326fe36a626f3c1bf30a11f813093cbb4dcc107af039cff724d0cdf648541fdf";
@@ -899,6 +909,11 @@
       name = "universal_ores-v1.6.1.jar";
       url = "https://cdn.modrinth.com/data/68kWHuUF/versions/n0hOKzrC/universal_ores-v1.6.1.jar";
       sha512 = "9cd57fcf62e9b16b16455765b58e175624b7f8c876b25ce1f1de833cc433990081b5a9e1c1d6611a14e0eaa95dc74202a660f2790ca6946c33d81cbe5819f310";
+    })
+    (pkgs.fetchurl {
+      name = "unloadedactivity-v0.6.7+1.21-1.21.1.jar";
+      url = "https://cdn.modrinth.com/data/Oo4rJCDP/versions/lrpwT74F/unloadedactivity-v0.6.7%2B1.21-1.21.1.jar";
+      sha512 = "4f0f9854466fc1850912bb9eb509a5d52ff46681e942fe0a347891107c4980498529aad37d9d6a4222031ecd6797f9549ed8f6d7723a9376ae242bff2846bcb0";
     })
     (pkgs.fetchurl {
       name = "vb-compat-1.7-1.21.1.jar";
