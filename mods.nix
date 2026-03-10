@@ -46,6 +46,11 @@
       sha512 = "8b44a253d4872f3f481df5e674163b3204a17e571a3cc9c697776f2f76aea625de5cb0897c005c0032bf8cb3ffa495e5938b302f9d4182f8ff412eb1f60a1b51";
     })
     (pkgs.fetchurl {
+      name = "BiomesOPlenty-fabric-1.21.1-21.1.0.13.jar";
+      url = "https://cdn.modrinth.com/data/HXF82T3G/versions/YPm4arUa/BiomesOPlenty-fabric-1.21.1-21.1.0.13.jar";
+      sha512 = "34bf011c38be11d593b1e71a2a398431468c42d5a1744f0572158cd025670f8e9171bbf93baaf442708f2d0171f0e158592d4f48184998e0bff4c9836460e240";
+    })
+    (pkgs.fetchurl {
       name = "Boids-2.0.4+1.21.jar";
       url = "https://cdn.modrinth.com/data/2OckSy74/versions/7Wk4e9Zz/Boids-2.0.4%2B1.21.jar";
       sha512 = "b9a14de96875c317607583a3dff62f7dad75f1bd21fa6e4268a19e0abaffd557dce2e92df207ebbea41e7a75648ddfba52cc7875cf4b31e245a43382946c2a1e";
@@ -64,6 +69,11 @@
       name = "Clumps-fabric-1.21.1-19.0.0.1.jar";
       url = "https://cdn.modrinth.com/data/Wnxd13zP/versions/3ene3W1l/Clumps-fabric-1.21.1-19.0.0.1.jar";
       sha512 = "0aa8e3508d0a40ef814d4064c0b6cadba6326128dd878fe69f30677c889cec4ccb8f639c22bdd7083a73ae8fa76e1c115b5e4b1885904dc1244b02ab2f728e78";
+    })
+    (pkgs.fetchurl {
+      name = "Corgilib-Fabric-1.21.1-5.0.0.7.jar";
+      url = "https://cdn.modrinth.com/data/ziOp6EO8/versions/a99hyJb6/Corgilib-Fabric-1.21.1-5.0.0.7.jar";
+      sha512 = "1fffa4d31e80c76fde84651b6295847167d3186b51d610bd5568397a9d53f77d883854bb116c7738a001def78c24e48ae36c287f16492921cad263e32b5bea6e";
     })
     (pkgs.fetchurl {
       name = "Debugify-1.21.1+1.0.jar";
@@ -91,6 +101,11 @@
       sha512 = "6ee8b04af858450eac2e0fe6c3a6cb09dfc0f9c1691fb0f76f79bbc73e08e5dca6f18257294ba647b1520d4fb2110bbbb085830e536c8f4638995c75f66fe1eb";
     })
     (pkgs.fetchurl {
+      name = "Enhanced-Cats-1.21-1.21.4-0.8.jar";
+      url = "https://cdn.modrinth.com/data/e2R0wxyL/versions/KKzNauET/Enhanced%20Cats-1.21-1.21.4-0.8.jar";
+      sha512 = "cd3a7302f13624a6f61e30bf506021b54232d81f6fcf3db4817e1e75e430955ae16a4a4854335a84c1c1af32c00fb90571623c904c829f50e663f41bc0fe35b7";
+    })
+    (pkgs.fetchurl {
       name = "ExplorersCompass-1.21.1-2.2.5-fabric.jar";
       url = "https://cdn.modrinth.com/data/RV1qfVQ8/versions/i1WCJNIW/ExplorersCompass-1.21.1-2.2.5-fabric.jar";
       sha512 = "2aee404833e040b004cbd5b63c08c1fcf2f05046b1f73a83e89a471f96ff959d400f2450d0fdfaf6e35a476062cf61ff04745ebebf342debec07da524a2f791c";
@@ -99,6 +114,11 @@
       name = "Explorify-v1.6.4-f15-88.mod.jar";
       url = "https://cdn.modrinth.com/data/HSfsxuTo/versions/9vHj342y/Explorify%20v1.6.4%20f15-88.mod.jar";
       sha512 = "601ee61e3619ab6a929ff06e4e3db6cc480d97a19e5716ac40a2a325d2d609b857a1ac17f2c0ed2b242e662b5486f4e0f59584fbd47acd481b318c45c244254b";
+    })
+    (pkgs.fetchurl {
+      name = "FallingTree-1.21.1-1.21.1.11.jar";
+      url = "https://cdn.modrinth.com/data/Fb4jn8m6/versions/wxGXaJMA/FallingTree-1.21.1-1.21.1.11.jar";
+      sha512 = "21876b270ca40e3ad6168423f2aba04460f590be191c5558d53e4f542993efa6070589029cb3218557309b096cd920e4da65e53f19687b86c638ec6c342d83e5";
     })
     (pkgs.fetchurl {
       name = "FarmersDelight-1.21.1-3.2.5+refabricated.jar";
@@ -186,6 +206,16 @@
       sha512 = "23bb4a8a6a3f7071281cf97560e12f37e1f5f638a156e3fcb92a50ff0091f1fcfa3e090e7745e4b1175e7c2c784e38d73536a1044db1bf225a182fab758a5a29";
     })
     (pkgs.fetchurl {
+      name = "Oh-The-Biomes-Weve-Gone-Fabric-2.5.4.jar";
+      url = "https://cdn.modrinth.com/data/NTi7d3Xc/versions/GjFvzoql/Oh-The-Biomes-Weve-Gone-Fabric-2.5.4.jar";
+      sha512 = "7d6b8aecd2f55a7a3727f8968b4ffa1458ab67879f984038b59ba53b24c6616bbaf57cc8b40a1d853091c4e8959731152472298a11c0c9708ca0ae0e0e2642ea";
+    })
+    (pkgs.fetchurl {
+      name = "Oh-The-Trees-Youll-Grow-fabric-1.21.1-5.2.1.jar";
+      url = "https://cdn.modrinth.com/data/g8NOG5OR/versions/rtWGtxpz/Oh-The-Trees-Youll-Grow-fabric-1.21.1-5.2.1.jar";
+      sha512 = "76e7e07d666a48fb0f364d36c6e2ef3d1a4b4f2e563ab45e9f0aef63a81e781cf8e5827f4f88b62e152135e5b1ee69cffeab29a7d527c2dc66f382a6e2b5b47f";
+    })
+    (pkgs.fetchurl {
       name = "Pehkui-3.8.3+1.14.4-1.21.jar";
       url = "https://cdn.modrinth.com/data/t5W7Jfwy/versions/6fzxx6SC/Pehkui-3.8.3%2B1.14.4-1.21.jar";
       sha512 = "5eb721d7e0e6889857a81f340451c9a98f8dcddca67dd919f9e69691cadf44b5f001e3c71db69f6b98d5d8709db739ad7b91dc71bd35880a0e6241b723822f1f";
@@ -239,6 +269,16 @@
       name = "TaxFreeLevels-1.4.7-fabric-1.21.1.jar";
       url = "https://cdn.modrinth.com/data/jCBrrLTs/versions/PJV01Pls/TaxFreeLevels-1.4.7-fabric-1.21.1.jar";
       sha512 = "82bc601bd8151aea65a95deb0a56abdc9edbe7b41826143046894ebba48693ae21e2451ba4c1fd7398880e8fe45d1134442a304630874f99adb26449167204bf";
+    })
+    (pkgs.fetchurl {
+      name = "TerraBlender-fabric-1.21.1-4.1.0.8.jar";
+      url = "https://cdn.modrinth.com/data/kkmrDlKT/versions/XNtIBXyQ/TerraBlender-fabric-1.21.1-4.1.0.8.jar";
+      sha512 = "f933f0c70babe3cf1efe3b8121486f26db9d48799b6d50557ec4f7bc47e553fe00c837f4940d70aa2eab7f13f91065a9e56c0cc53f8aa2393edaf423f80997b8";
+    })
+    (pkgs.fetchurl {
+      name = "TradingPost-v21.1.1-1.21.1-Fabric.jar";
+      url = "https://cdn.modrinth.com/data/8pcjMDgj/versions/JxSbQLVf/TradingPost-v21.1.1-1.21.1-Fabric.jar";
+      sha512 = "267508dc054046ef5600ea51558a0047cf560e2f551f936021b1b5ea5679cb54eb9a35842d015cc4b5e3e29b1b24c2ffa86e49f1098af1820f7292623cbd8a22";
     })
     (pkgs.fetchurl {
       name = "Unwrecked-Ships-Plus-2.0.5.jar";
@@ -304,6 +344,11 @@
       name = "attributefix-fabric-1.21.1-21.1.3.jar";
       url = "https://cdn.modrinth.com/data/lOOpEntO/versions/XwbErf6s/attributefix-fabric-1.21.1-21.1.3.jar";
       sha512 = "0ae9f64b9af206a506722cc11a900f75e8bb137cb9598c0f572ed1c3b993948fc47ebfec54cf0d66043901322c4a0caba220d9e953e0a6b68c244774d65088e5";
+    })
+    (pkgs.fetchurl {
+      name = "betterdays-1.21.1-3.3.6.2-FABRIC.jar";
+      url = "https://cdn.modrinth.com/data/tPLE214j/versions/xlclI4Mf/betterdays-1.21.1-3.3.6.2-FABRIC.jar";
+      sha512 = "c1e7c779f84eea50aef387451a0c1a95ce41eb45845406f9605334aae2bd1b4d1d31e4e53de5a752d88a719e4f17121d6c774e2c082c9059d889e8fa69d3b0e1";
     })
     (pkgs.fetchurl {
       name = "bettertrims-4.0.4+1.21.1-fabric.jar";
@@ -396,6 +441,11 @@
       sha512 = "20ade6d666440659d38ec43202624993f47681a844c7f9e3e66a462e9f88f5d98bdd9a0a26278b1ed94bd4836b3c9cdbcfef73ad8515555f239e84bfea45d938";
     })
     (pkgs.fetchurl {
+      name = "compatdatapacks76-1.0.13.210-fabric.jar";
+      url = "https://cdn.modrinth.com/data/WcHRLVFE/versions/cCnM8wI1/compatdatapacks76-1.0.13.210-fabric.jar";
+      sha512 = "0b2c0636588559432e9c56860527d3f49f7a93b4e5ab95fc7f5406341b44138d651ba647b6135381530dcc8ed84f455bd85ff1a5f0b945dae1d10ee390b4bd10";
+    })
+    (pkgs.fetchurl {
       name = "compatdelight-1.0.0.1.jar";
       url = "https://cdn.modrinth.com/data/iNJJU8Ib/versions/xLaL5q5D/compatdelight-1.0.0.1.jar";
       sha512 = "0bfe64496bcbf82554ca437d02fc724297b1f23a165fd963d370fdd10e22186981258e217b78eeeb6784b87253fb23376a5ed824b04d17f9991b63cee88c4d79";
@@ -461,6 +511,11 @@
       sha512 = "3ab30a424dc2f5c3bcb71d86ebffaa82767dd51710513bed2caa35574dd922a1f663357caeb5f4ce8e4392ad9518cafe79d281744b6c010612aef96f42eec094";
     })
     (pkgs.fetchurl {
+      name = "enchanted-bookshelves-1.0+1.21.jar";
+      url = "https://cdn.modrinth.com/data/CIfCvYLI/versions/asukqEM7/enchanted-bookshelves-1.0%2B1.21.jar";
+      sha512 = "e5cbe71a734903cceb832a0279474685ae219e0aaa6e9e0c07270d7cd969ac6cdb783d14fee2e44f77198054452328e5f7821caa49906a227712aabb33ba3ad5";
+    })
+    (pkgs.fetchurl {
       name = "enchanter_fix-1.8+mc1.20-1.21.11.jar";
       url = "https://cdn.modrinth.com/data/vNE5j3Te/versions/q98qlPBf/enchanter_fix-1.8%2Bmc1.20-1.21.11.jar";
       sha512 = "dda91e85a0256dd1d12e4e304da3b818cbb791c6011bcabf4eb3e2c447ab28d099f29ab3a4a0866515d39d5138f10c915c1a2a53b89baa3b9b93847d138d61c8";
@@ -484,6 +539,16 @@
       name = "fabric-language-kotlin-1.13.9+kotlin.2.3.10.jar";
       url = "https://cdn.modrinth.com/data/Ha28R6CL/versions/ViT4gucI/fabric-language-kotlin-1.13.9%2Bkotlin.2.3.10.jar";
       sha512 = "498672ee88cf703685026e74f82a85e30d980c62a1c8cc14744cb73add09a857db8d585b405e19f558ec490613642750eb00e09d8ef5a3c9578bc52b53568d51";
+    })
+    (pkgs.fetchurl {
+      name = "farmers-cutting-biomes-o-plenty-1.21-2.0.0-fabric.jar";
+      url = "https://cdn.modrinth.com/data/QWfaJXEc/versions/ErfSMjj4/farmers-cutting-biomes-o-plenty-1.21-2.0.0-fabric.jar";
+      sha512 = "fb1e2b063aa9877bc5687b83fe21659857529be3f7fb436dd4750dfdc746225dfff96d60f0a061a131b3da3162ec62db49d70a820d6d2f41534a9d6e7de09029";
+    })
+    (pkgs.fetchurl {
+      name = "farmers-cutting-oh-the-biomes-weve-gone-1.21.1-2.1-fabric.jar";
+      url = "https://cdn.modrinth.com/data/ickBpNUE/versions/NrAtQ6ut/farmers-cutting-oh-the-biomes-weve-gone-1.21.1-2.1-fabric.jar";
+      sha512 = "cc534c8f53aa65b6e973db2de740f982aa426b4db71a5523e16d272f57344dc6ce7b16968fec82420697168c964173e39aeb7dff25738b7cb14a17db24776042";
     })
     (pkgs.fetchurl {
       name = "farsighted-mobs-fabric-1.1-1.20.5.jar";
@@ -571,9 +636,19 @@
       sha512 = "4addcd4a1ceb5c545742e97f06df749f6aab9cff1eb9dcafceab183510947bafb952a22c5ee4584a53a067c8e8e1eb46eb20cd2b5cb6f7d8f048c1ee421c9733";
     })
     (pkgs.fetchurl {
+      name = "infinite-items-v1.4.1.jar";
+      url = "https://cdn.modrinth.com/data/DgraaGMu/versions/6n7nEDEk/infinite-items-v1.4.1.jar";
+      sha512 = "08b860fb7bca556626c8b25618f1ac138111ab2cea3316cc41a8f58fe9338f8f4a58cee63c8a149d9e285b2c25d43198d485aceef44eff7b8a4aa5946658905e";
+    })
+    (pkgs.fetchurl {
       name = "infinitetrading-1.21.1-4.6.jar";
       url = "https://cdn.modrinth.com/data/U3eoZT3o/versions/QV78XqMj/infinitetrading-1.21.1-4.6.jar";
       sha512 = "481b5ff880cc5b8adbda34f6e082c9df51956b0d2d2418703bd21257d71ad914b4f696edeeeaeec960fff475c0b2108923b3bb532abee665c4b5a075a1e26363";
+    })
+    (pkgs.fetchurl {
+      name = "kitchenprojectiles-1.0.8+mc1.21.1.jar";
+      url = "https://cdn.modrinth.com/data/BYmvNgRP/versions/JRF5jQo2/kitchenprojectiles-1.0.8%2Bmc1.21.1.jar";
+      sha512 = "85a03c872e33ce31e809260d52933466d61d4e2ba0d5e8cf7f12879fc2b22856033fc8120ed8a97f3da89253047af17e7de156d268a495e979b55030aa52007f";
     })
     (pkgs.fetchurl {
       name = "krypton-0.2.8.jar";
@@ -599,6 +674,11 @@
       name = "maestro-fabric-1.21.1-4.0.0.jar";
       url = "https://cdn.modrinth.com/data/jcZX6rvP/versions/crjsHtW2/maestro-fabric-1.21.1-4.0.0.jar";
       sha512 = "7bede5b0e8342eff0b27b7c8b433f44fe7724f3ab7d99d03eb5f4d94c5bbcc107ac3ad99543f7fbec6d3087fd58e7400e34d9f130c1e3b35f7de75ee18f051a7";
+    })
+    (pkgs.fetchurl {
+      name = "midnightcontrols-extra-1.0.0.jar.disabled";
+      url = "https://cdn.modrinth.com/data/WajYWUam/versions/1.0.0/midnightcontrols-extra-1.0.0.jar";
+      sha512 = "7f57a11737d1fd444bc6f6e1b94fbc1e49fca3306e667f4bb40883aabe08f6968cd1a195c53bdd2e8aaf8106f705e945ff385f138551ea7dc4495bafbd212962";
     })
     (pkgs.fetchurl {
       name = "midnightlib-fabric-1.9.2+1.21.1.jar";
@@ -664,6 +744,11 @@
       name = "neruina-3.2.2+1.21.1-fabric.jar";
       url = "https://cdn.modrinth.com/data/1s5x833P/versions/yrmq727A/neruina-3.2.2%2B1.21.1-fabric.jar";
       sha512 = "ba498ec2f1f4d73728ec9c168f441910c096f09b74698d4b0435a974fe7530227d618406678c264a9042ca38c3b66b8bf6cfb8cc11459271c91f7e0cfcb825a9";
+    })
+    (pkgs.fetchurl {
+      name = "no-enderman-grief-v.2.1.2.jar";
+      url = "https://cdn.modrinth.com/data/ss02V75k/versions/60P6f4CJ/no-enderman-grief-v.2.1.2.jar";
+      sha512 = "c8c2e1e93f090e2afdefbfcbe0061dfc6843010394d50a0e17d99e7717794b567a1d98a63667551f98843022aa67499524d31c308902b872273dd4664b5d54d8";
     })
     (pkgs.fetchurl {
       name = "nofeathertrample-1.21.1-1.3.jar";
@@ -864,6 +949,11 @@
       name = "universal_ores-v1.6.1.jar";
       url = "https://cdn.modrinth.com/data/68kWHuUF/versions/n0hOKzrC/universal_ores-v1.6.1.jar";
       sha512 = "9cd57fcf62e9b16b16455765b58e175624b7f8c876b25ce1f1de833cc433990081b5a9e1c1d6611a14e0eaa95dc74202a660f2790ca6946c33d81cbe5819f310";
+    })
+    (pkgs.fetchurl {
+      name = "unloadedactivity-v0.6.7+1.21-1.21.1.jar";
+      url = "https://cdn.modrinth.com/data/Oo4rJCDP/versions/lrpwT74F/unloadedactivity-v0.6.7%2B1.21-1.21.1.jar";
+      sha512 = "4f0f9854466fc1850912bb9eb509a5d52ff46681e942fe0a347891107c4980498529aad37d9d6a4222031ecd6797f9549ed8f6d7723a9376ae242bff2846bcb0";
     })
     (pkgs.fetchurl {
       name = "vb-compat-1.7-1.21.1.jar";
