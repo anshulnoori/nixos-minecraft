@@ -516,11 +516,6 @@
       sha512 = "5fd8f2d54f6ba75ee9cbee4830187f4ce82871107c806869bf606d76d0ba3c28b532fa82eff7437ad3a79a61c0e7d3781c6b1d9120e57fd4f90d2cdecb1768f2";
     })
     (pkgs.fetchurl {
-      name = "fastback-0.20.0+1.21.1-fabric.jar";
-      url = "https://cdn.modrinth.com/data/ZHKrK8Rp/versions/Rhplybe8/fastback-0.20.0%2B1.21.1-fabric.jar";
-      sha512 = "08d746538ce7bbc78f90f264a27212820a8e3a8129bef8edeb91e3a816316734c630bfd0e5c32915c2727014ecc9751852121dce359ab03a2a1194d35df322d3";
-    })
-    (pkgs.fetchurl {
       name = "ferritecore-7.0.3-fabric.jar";
       url = "https://cdn.modrinth.com/data/uXXizFIs/versions/sOzRw3CG/ferritecore-7.0.3-fabric.jar";
       sha512 = "3ad31620fac4ff44327dc7dedbe162b2d978f3f246dc16255a6e400ce9592a0d326fe36a626f3c1bf30a11f813093cbb4dcc107af039cff724d0cdf648541fdf";
