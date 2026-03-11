@@ -526,9 +526,9 @@
       sha512 = "b00c68796629afc99ca891b29b92aeefd7c3033d628b0af3d95a58bd36e6281c206341d824a18c78e74866421f29b5549667d591ac3dc1e28a051e45ca7d45c3";
     })
     (pkgs.fetchurl {
-      name = "friendsandfoes-fabric-4.0.22+mc1.21.1.jar";
-      url = "https://cdn.modrinth.com/data/POQ2i9zu/versions/z2KQ2eLu/friendsandfoes-fabric-4.0.22%2Bmc1.21.1.jar";
-      sha512 = "29c293a6c5cd9b571769ed573fe3755bf42ff027e4a99fbc909d4dcacecf7b771bf5971d1db246247e74def1891cbc404eec06e3fa3cb1217af1b0d0454d650b";
+      name = "friendsandfoes-fabric-4.0.23+mc1.21.1.jar";
+      url = "https://cdn.modrinth.com/data/POQ2i9zu/versions/SjoyrJsH/friendsandfoes-fabric-4.0.23%2Bmc1.21.1.jar";
+      sha512 = "1216c048dc3d788413aecd84449af81cc7b224b2bdf7f8a62adbd024d6ba6ee36fd4994fe1c95d58794d77a976b2e4526d149f3a965c172f75ed8b4606ea1ff9";
     })
     (pkgs.fetchurl {
       name = "frostiful-2.3.1+1.21.1.jar";
@@ -621,9 +621,9 @@
       sha512 = "a1fc557b9985954258f30fa32d4134867d6cd1d045147171a89a711d63b1b94f5dd58564aa3060ce10e8d81c2be1d8bae7ff828ee9c24a1c1b9f8398564936a9";
     })
     (pkgs.fetchurl {
-      name = "lithium-fabric-0.15.2+mc1.21.1.jar";
-      url = "https://cdn.modrinth.com/data/gvQqBUqZ/versions/Yu6L8EnD/lithium-fabric-0.15.2%2Bmc1.21.1.jar";
-      sha512 = "0422a6694c997aa91ce01fa038bd5d46d7d8d64f0a5abae7420e5a2a10fdcd1e6cf9033f1d95b402a9ba0f07c8c7cf5cfcd3e50ae7c4fe2ac82f39a58583012e";
+      name = "lithium-fabric-0.15.3+mc1.21.1.jar";
+      url = "https://cdn.modrinth.com/data/gvQqBUqZ/versions/XQJtuOTA/lithium-fabric-0.15.3%2Bmc1.21.1.jar";
+      sha512 = "8c576d519121b0c2521101d2209eccd85d560b097fcb847aa54c51cd0d3f3947676f01c8d99913f514487c8e0972a1cf5f3da0c9ef0ec9bacdf2baeb4eb7d1a7";
     })
     (pkgs.fetchurl {
       name = "lmft-1.1.1+1.21.9-fabric.jar";
