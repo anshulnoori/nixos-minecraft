@@ -841,6 +841,11 @@
       sha512 = "e7130f4042b75dc6ed6843d5645bc992ceebf6e67747e6c7bfd399cf887924bf0dd6e5e5945916ded17a0a082f3b37a3ffd886029436455d2d968c92ffc3c2ed";
     })
     (pkgs.fetchurl {
+      name = "stackrefill-1.21.1-4.9.jar";
+      url = "https://cdn.modrinth.com/data/mQWkB9ON/versions/5RkgQCwL/stackrefill-1.21.1-4.9.jar";
+      sha512 = "42f5bf809f533d472ff64d2b7b55f557b2ce921674469291dc34db4717cd88fc1114703ad420e1d758edf077907f4ff60a404610e24524f2cd2bce49fe2a7b74";
+    })
+    (pkgs.fetchurl {
       name = "stonezone-1.21-2.11.12-fabric.jar";
       url = "https://cdn.modrinth.com/data/uYwn8IP5/versions/YfektsWy/stonezone-1.21-2.11.12-fabric.jar";
       sha512 = "a0215c68b0b152c488178fa80cefa251e7f4db2560afc2a0c2ed2848634b01a24de6a6bc6140a753855d1a51aecece99dfbfc7e30b8bd9af46b71c9142351f57";
