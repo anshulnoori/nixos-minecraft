@@ -83,7 +83,7 @@ in {
   };
 
   systemd.services.minecraft-server-fabric = {
-    path = [pkgs.git];
+    path = [pkgs.git pkgs.git-lfs];
 
     environment = {
       LD_LIBRARY_PATH = lib.makeLibraryPath [pkgs.udev];

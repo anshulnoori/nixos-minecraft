@@ -136,6 +136,7 @@
     zip
 
     git
+    git-lfs
     curl
     jq
     vim
