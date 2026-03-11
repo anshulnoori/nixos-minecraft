@@ -6,6 +6,11 @@
 }: let
   mods = [
     (pkgs.fetchurl {
+      name = "AdvancedLootInfo-fabric-1.21.1-1.8.1.jar";
+      url = "https://cdn.modrinth.com/data/PEPVViac/versions/z2yH3jwJ/AdvancedLootInfo-fabric-1.21.1-1.8.1.jar";
+      sha512 = "8c9fbdb56794329941e9a0742cae9117dbba4629be68b6d6483f725c53c295193846cb4e6decf8873e7cb00dcaef8d0e17f03ef6560208acd1011d31601e9b92";
+    })
+    (pkgs.fetchurl {
       name = "AllTheTrims-5.0.1-fabric+1.21.jar";
       url = "https://cdn.modrinth.com/data/pnsUKrap/versions/xUFWApCx/AllTheTrims-5.0.1-fabric%2B1.21.jar";
       sha512 = "2f8d4a97b091fdad584a14b37eccc7c35fb689a7f4dd4aa95070ebe988aa2a8519366dfa1a684c076cc07088838fa57c273773351a5c1eec62c4627b4ba5d84e";
@@ -471,11 +476,6 @@
       sha512 = "8af56f91ccb203b9c4e055d81065c0ea48e025ec6d9a0848901868e262afb6ddb52f0f34de5b4ece42f25fc5ed04f96ccf7aee4f2cc12a2906985ba7c31fd30c";
     })
     (pkgs.fetchurl {
-      name = "emi_loot-0.7.9+1.21+fabric.jar";
-      url = "https://cdn.modrinth.com/data/qbbO7Jns/versions/6uDAJNif/emi_loot-0.7.9%2B1.21%2Bfabric.jar";
-      sha512 = "e274a094e5469bd70134135a4a3319e24d7d0b33631cb8a6b013f9ee3c01b7ab23298fc7b698b2c8a1b474c725230ec8e28e984f51829f45083cf25210e52a93";
-    })
-    (pkgs.fetchurl {
       name = "emi_ores-1.2+1.21.1+fabric.jar";
       url = "https://cdn.modrinth.com/data/sG4TqDb8/versions/OwDhxsDZ/emi_ores-1.2%2B1.21.1%2Bfabric.jar";
       sha512 = "3ab30a424dc2f5c3bcb71d86ebffaa82767dd51710513bed2caa35574dd922a1f663357caeb5f4ce8e4392ad9518cafe79d281744b6c010612aef96f42eec094";
@@ -734,6 +734,16 @@
       name = "pneumonocore-1.2.1+1.21+A.jar";
       url = "https://cdn.modrinth.com/data/ZLKQjA7t/versions/QKvgjhTZ/pneumonocore-1.2.1%2B1.21%2BA.jar";
       sha512 = "028e18a7ec6719f67b3d2e2d0c57d207ff7ddf0b048d64c2dfed127566283aaafc17d70927d1c30259d4990ce0c12d5c177c4f5bbc2285a9163c08e29b364c28";
+    })
+    (pkgs.fetchurl {
+      name = "polydex-1.2.6+1.21.1.jar";
+      url = "https://cdn.modrinth.com/data/m5NB7FJE/versions/rC5LgjE1/polydex-1.2.6%2B1.21.1.jar";
+      sha512 = "ad56e6a0db41ac4d92ddd79512873025d7e7614e30f30a8f10a7e148e823da357c6bfa8281cb1becba1e9f3ae8569e50bbcfe403278b0f858a57b9a7b011b4dd";
+    })
+    (pkgs.fetchurl {
+      name = "polydex-bridge-1.0.1+mc.1.21.1.jar";
+      url = "https://cdn.modrinth.com/data/cjSHexOj/versions/1SDiwoUn/polydex-bridge-1.0.1%2Bmc.1.21.1.jar";
+      sha512 = "cbc439c618a179b3eca2771a2c891270c8d32951adf2b474bb33fd8ff1243399a9c3b62d738db7687ae05e8760ba0fe17e41f3a656081fc25c5c1cbe9e079763";
     })
     (pkgs.fetchurl {
       name = "polymorph-fabric-1.1.0+1.21.1.jar";
