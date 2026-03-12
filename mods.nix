@@ -31,6 +31,11 @@
       sha512 = "b4ba107fe6c4fdc2b723e9d3c6a015d191924b35c75b27079df67c4496a1cb53f4a63ec3bad9d5f8061e70d21332c3bbd1e45110768bb7a5ed397096c85cdc5c";
     })
     (pkgs.fetchurl {
+      name = "BetterTrims-3.2.8-fabric+1.21.1.jar";
+      url = "https://cdn.modrinth.com/data/98ytUvlc/versions/edyBtO5k/BetterTrims-3.2.8-fabric%2B1.21.1.jar";
+      sha512 = "5391e899702e5b906b38a59e6782bc97516f457f5cb66f180f5c5066ac8585b565bf355ea0269e1e8323f417b8f1f56d0f5ce55b2b39f0b7ad5542a203cf8e73";
+    })
+    (pkgs.fetchurl {
       name = "Big-Globe---Mythic-Metals-Compatibility-1.9.jar";
       url = "https://cdn.modrinth.com/data/zVynCmEG/versions/IQy4IDsI/Big%20Globe%20-%20Mythic%20Metals%20Compatibility%201.9.jar";
       sha512 = "8deddd9943fcb80ea798891ba6f81c1de7dd55474490989ec6ced40312c81e6b14c05ded32c006f8ff6fea65b7c893cd235b9279ceca7d222d99ec514066d9d6";
@@ -329,11 +334,6 @@
       name = "betterdays-1.21.1-3.3.6.2-FABRIC.jar";
       url = "https://cdn.modrinth.com/data/tPLE214j/versions/xlclI4Mf/betterdays-1.21.1-3.3.6.2-FABRIC.jar";
       sha512 = "c1e7c779f84eea50aef387451a0c1a95ce41eb45845406f9605334aae2bd1b4d1d31e4e53de5a752d88a719e4f17121d6c774e2c082c9059d889e8fa69d3b0e1";
-    })
-    (pkgs.fetchurl {
-      name = "bettertrims-4.0.4+1.21.1-fabric.jar";
-      url = "https://cdn.modrinth.com/data/98ytUvlc/versions/mScSjkvX/bettertrims-4.0.4%2B1.21.1-fabric.jar";
-      sha512 = "313974b543457045a30b3f29f59aecb6607aa8347c67945039c2e646a0c4790af5db63a8e131f6bcaafaa58f001adf247c0eb4e592b619466fa7e45620d6fe57";
     })
     (pkgs.fetchurl {
       name = "big-globe-antique-trading-ship-1.0.jar";
