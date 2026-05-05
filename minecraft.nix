@@ -37,7 +37,7 @@ in {
     servers.neoforge = {
       enable = true;
       autoStart = true;
-      package = pkgs.neoforgeServers.neoforge-1_21_1;
+      package = pkgs.neoforgeServers.neoforge-1_21_1-21_1_228;
       restart = "always";
       enableReload = true;
 
