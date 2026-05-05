@@ -104,21 +104,26 @@ async def get_all_metadata(hashes: list[str]):
 def sanitize_name(name: str) -> str:
     return name.replace(" ", "-").replace("'", "-")
 
-def generate_nix(mods: list[dict], local_dps: list[str], index_dps: list[dict]) -> str:
+def generate_nix(mods: list[dict], local_mods: list[str], local_dps: list[str], index_dps: list[dict]) -> str:
     """Generate the Nix configuration string."""
-    
+
     def to_nix_fetch(m):
         name = json.dumps(m["name"])
         url = json.dumps(m["url"])
         sha = json.dumps(m["sha512"])
         return f"    (pkgs.fetchurl {{ name = {name}; url = {url}; sha512 = {sha}; }})"
 
-    def to_nix_local(dp):
+    def to_nix_local_mod(m):
+        name = json.dumps(m)
+        return f'    (pkgs.runCommand {name} {{}} "cp ${{./mods/{m}}} $out")'
+
+    def to_nix_local_dp(dp):
         name = json.dumps(dp)
         return f'    (pkgs.runCommand {name} {{}} "cp ${{./datapacks/{dp}}} $out")'
 
     mods_entries = "\n".join(to_nix_fetch(m) for m in mods)
-    local_dp_entries = "\n".join(to_nix_local(dp) for dp in sorted(local_dps))
+    local_mod_entries = "\n".join(to_nix_local_mod(m) for m in sorted(local_mods))
+    local_dp_entries = "\n".join(to_nix_local_dp(dp) for dp in sorted(local_dps))
     index_dp_entries = "\n".join(to_nix_fetch(dp) for dp in index_dps)
 
     return f"""{{
@@ -129,6 +134,7 @@ def generate_nix(mods: list[dict], local_dps: list[str], index_dps: list[dict]) 
 }}: let
   mods = [
 {mods_entries}
+{local_mod_entries}
   ];
   datapacks = [
 {local_dp_entries}
@@ -151,6 +157,7 @@ async def run():
     dry_run = os.environ.get("DRY_RUN") == "true"
     output_file = Path("mods.nix")
     datapacks_dir = Path("datapacks")
+    mods_dir = Path("mods")
 
     if not mrpack_path.exists():
         print(f"Error: {mrpack_path} not found.", file=sys.stderr)
@@ -159,24 +166,39 @@ async def run():
     print(f"--- Processing {mrpack_path} ---", file=sys.stderr)
 
     active_local_datapacks = set()
+    active_local_mods = set()
     with zipfile.ZipFile(mrpack_path, "r") as pack:
         index = msgspec.json.decode(pack.read("modrinth.index.json"), type=Index)
-        
-        # Datapack extraction
+
+        # Extraction logic
         for name in pack.namelist():
+            # Datapacks
             if name.startswith("overrides/datapacks/") and name.endswith(".zip"):
                 dest_name = sanitize_name(Path(name).name)
                 active_local_datapacks.add(dest_name)
                 if not dry_run:
                     datapacks_dir.mkdir(exist_ok=True)
                     (datapacks_dir / dest_name).write_bytes(pack.read(name))
+            # Local Mods
+            elif name.startswith("overrides/mods/") and name.endswith(".jar"):
+                dest_name = sanitize_name(Path(name).name)
+                active_local_mods.add(dest_name)
+                if not dry_run:
+                    mods_dir.mkdir(exist_ok=True)
+                    (mods_dir / dest_name).write_bytes(pack.read(name))
 
     # Cleanup
-    if not dry_run and datapacks_dir.exists():
-        for existing in datapacks_dir.glob("*.zip"):
-            if existing.name not in active_local_datapacks:
-                print(f"Cleaning up unused datapack: {existing.name}", file=sys.stderr)
-                existing.unlink()
+    if not dry_run:
+        if datapacks_dir.exists():
+            for existing in datapacks_dir.glob("*.zip"):
+                if existing.name not in active_local_datapacks:
+                    print(f"Cleaning up unused datapack: {existing.name}", file=sys.stderr)
+                    existing.unlink()
+        if mods_dir.exists():
+            for existing in mods_dir.glob("*.jar"):
+                if existing.name not in active_local_mods:
+                    print(f"Cleaning up unused local mod: {existing.name}", file=sys.stderr)
+                    existing.unlink()
 
     # Metadata & Filtering
     mod_files = [f for f in index.files if f.path.startswith("mods/")]
@@ -189,10 +211,10 @@ async def run():
         sha = f.hashes.sha512
         vinfo = versions.get(sha)
         pinfo = projects.get(vinfo.project_id) if vinfo else None
-        
+
         server_side = pinfo.server_side if pinfo else "unknown"
         filename = sanitize_name(Path(f.path).name)
-        
+
         if server_side == "unsupported":
             skipped.append(filename)
         else:
@@ -205,8 +227,8 @@ async def run():
 
     # Output Generation
     print("Generating and formatting Nix...", file=sys.stderr)
-    raw_nix = generate_nix(final_mods, list(active_local_datapacks), index_dps)
-    
+    raw_nix = generate_nix(final_mods, list(active_local_mods), list(active_local_datapacks), index_dps)
+
     process = subprocess.run(["alejandra", "--quiet", "-"], input=raw_nix, text=True, capture_output=True, check=True)
     formatted_nix = process.stdout
 
@@ -217,7 +239,7 @@ async def run():
         print(f"Wrote {output_file}", file=sys.stderr)
 
     # Summary
-    print(f"\nSummary:\n  Server Mods: {len(final_mods)}\n  Datapacks:   {len(active_local_datapacks) + len(index_dps)}", file=sys.stderr)
+    print(f"\nSummary:\n  Remote Mods: {len(final_mods)}\n  Local Mods:  {len(active_local_mods)}\n  Datapacks:   {len(active_local_datapacks) + len(index_dps)}", file=sys.stderr)
     if skipped:
         print("\nSkipped (Client-only):", file=sys.stderr)
         subprocess.run(["column"], input="\n".join(sorted(skipped)), text=True)
