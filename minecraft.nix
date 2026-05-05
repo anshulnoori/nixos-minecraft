@@ -37,9 +37,7 @@ in {
     servers.neoforge = {
       enable = true;
       autoStart = true;
-      package = pkgs.neoforgeServers.neoforge-1_21_1.override {
-        loaderVersion = "0.18.4";
-      };
+      package = pkgs.neoforgeServers.neoforge-1_21_1;
       restart = "always";
       enableReload = true;
 
