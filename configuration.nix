@@ -24,7 +24,7 @@
   boot.kernelPackages = let
     helpers = pkgs.callPackage "${inputs.nix-cachyos-kernel.outPath}/helpers.nix" {};
   in
-    helpers.kernelModuleLLVMOverride pkgs.linuxKernel.packagesFor pkgs.cachyosKernels.linux-cachyos-latest-lto-x86_64-v3;
+    helpers.kernelModuleLLVMOverride (pkgs.linuxKernel.packagesFor pkgs.cachyosKernels.linux-cachyos-latest-lto-x86_64-v3);
 
   boot.kernelParams = [
     "mitigations=auto"
