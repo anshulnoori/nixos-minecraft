@@ -23,8 +23,14 @@
 
   boot.kernelPackages = let
     helpers = pkgs.callPackage "${inputs.nix-cachyos-kernel.outPath}/helpers.nix" {};
+    basePackages = pkgs.linuxKernel.packagesFor pkgs.cachyosKernels.linux-cachyos-latest-lto-x86_64-v3;
   in
-    helpers.kernelModuleLLVMOverride (pkgs.linuxKernel.packagesFor pkgs.cachyosKernels.linux-cachyos-latest-lto-x86_64-v3);
+    (helpers.kernelModuleLLVMOverride basePackages).extend (final: prev: {
+      nvidia_x11 = prev.nvidia_x11.overrideAttrs (old: {
+        makeFlags = [];
+        dontBuild = true;
+      });
+    });
 
   boot.kernelParams = [
     "mitigations=auto"
