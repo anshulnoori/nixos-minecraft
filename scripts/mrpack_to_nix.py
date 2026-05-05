@@ -115,11 +115,12 @@ def generate_nix(mods: list[dict], local_mods: list[str], local_dps: list[str], 
 
     def to_nix_local_mod(m):
         name = json.dumps(m)
-        return f'    (pkgs.runCommand {name} {{}} "cp ${{./mods/{m}}} $out")'
+        # Using ./. + path is a safe way to reference local files in Nix
+        return f'    (pkgs.runCommand {name} {{}} "cp ${{./local_mods + "/{m}"}} $out")'
 
     def to_nix_local_dp(dp):
         name = json.dumps(dp)
-        return f'    (pkgs.runCommand {name} {{}} "cp ${{./datapacks/{dp}}} $out")'
+        return f'    (pkgs.runCommand {name} {{}} "cp ${{./datapacks + "/{dp}"}} $out")'
 
     mods_entries = "\n".join(to_nix_fetch(m) for m in mods)
     local_mod_entries = "\n".join(to_nix_local_mod(m) for m in sorted(local_mods))
@@ -157,7 +158,7 @@ async def run():
     dry_run = os.environ.get("DRY_RUN") == "true"
     output_file = Path("mods.nix")
     datapacks_dir = Path("datapacks")
-    mods_dir = Path("mods")
+    local_mods_dir = Path("local_mods")
 
     if not mrpack_path.exists():
         print(f"Error: {mrpack_path} not found.", file=sys.stderr)
@@ -184,8 +185,8 @@ async def run():
                 dest_name = sanitize_name(Path(name).name)
                 active_local_mods.add(dest_name)
                 if not dry_run:
-                    mods_dir.mkdir(exist_ok=True)
-                    (mods_dir / dest_name).write_bytes(pack.read(name))
+                    local_mods_dir.mkdir(exist_ok=True)
+                    (local_mods_dir / dest_name).write_bytes(pack.read(name))
 
     # Cleanup
     if not dry_run:
@@ -194,8 +195,8 @@ async def run():
                 if existing.name not in active_local_datapacks:
                     print(f"Cleaning up unused datapack: {existing.name}", file=sys.stderr)
                     existing.unlink()
-        if mods_dir.exists():
-            for existing in mods_dir.glob("*.jar"):
+        if local_mods_dir.exists():
+            for existing in local_mods_dir.glob("*.jar"):
                 if existing.name not in active_local_mods:
                     print(f"Cleaning up unused local mod: {existing.name}", file=sys.stderr)
                     existing.unlink()

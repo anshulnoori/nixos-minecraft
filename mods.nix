@@ -6,21 +6,6 @@
 }: let
   mods = [
     (pkgs.fetchurl {
-      name = "ChunkDebug-2.1.2+1.21.1$fabric-permissions-api-0.3.1.jar";
-      url = "https://cdn.modrinth.com/data/lzVo0Dll/versions/62DUD085/fabric-permissions-api-0.3.1.jar";
-      sha512 = "98f94da37879e66a3db9856481b3f9acdc8be64dd086a3a380e2d17f48f8723c8914c572602a3b76a734ef3b100d037b5e82c2991f13d00759b4c6441d1128b5";
-    })
-    (pkgs.fetchurl {
-      name = "chesttracker-2.6.7+1.21.1$whereisit-2.6.3+1.21.1.jar";
-      url = "https://cdn.modrinth.com/data/FCTyEqkn/versions/l7AnqnrL/whereisit-2.6.3%2B1.21.1.jar";
-      sha512 = "8aae3f45e717f8669487fb1c63dead968f9a5f496e8dc50a2334f18909a2b2d819e954b5d6042f535de7eb0822c8d757d061e222c526cbce21b92eb81d2c9ac1";
-    })
-    (pkgs.fetchurl {
-      name = "techutils-0.6.2+1.21.1$Fabric-ASM-v2.3.jar";
-      url = "https://cdn.modrinth.com/data/jEEzLOmA/versions/rpcALVHS/Fabric-ASM-v2.3.jar";
-      sha512 = "60627b24815567356fc0e595cc87e78fe69c9652ab1c85b7320b15677b953c99bb02094b78264e393301f1d72a396d6d3e200328eebdfb9cfd244048d5696a94";
-    })
-    (pkgs.fetchurl {
       name = "AchievementOptimizer-neoforge-1.21.1-2.1.0.jar";
       url = "https://cdn.modrinth.com/data/SvXrP8rT/versions/qHMtEGz4/AchievementOptimizer-neoforge-1.21.1-2.1.0.jar";
       sha512 = "534b4ded2849793359afc447a910065f294c69a5a4042ed4b2cb3ab542f2c87ffd667a23565d36677ad443ce1cb5373f2a1ff346eda0869103bb238797555dfd";
@@ -1795,6 +1780,9 @@
       url = "https://cdn.modrinth.com/data/crqH8IT5/versions/mmdIBcOB/zipline-1.2.1%2B1.21.1.jar";
       sha512 = "cdacb88eb2fe1b1b96235a507fa44c32faa0537dbc2bd6ddcd1f77141a7adcc44509c8e0199f01c60523f8c0d04f10a6f5aef74833e2fb6d333c4804055f737b";
     })
+    (pkgs.runCommand "FastSuite-1.21.1-6.0.7.jar" {} "cp ${./local_mods + "/FastSuite-1.21.1-6.0.7.jar"} $out")
+    (pkgs.runCommand "Placebo-1.21.1-9.9.1.jar" {} "cp ${./local_mods + "/Placebo-1.21.1-9.9.1.jar"} $out")
+    (pkgs.runCommand "create-aeronautics-bundled-1.21.1-1.2.1.jar" {} "cp ${./local_mods + "/create-aeronautics-bundled-1.21.1-1.2.1.jar"} $out")
   ];
   datapacks = [
   ];
