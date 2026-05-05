@@ -1,5 +1,5 @@
 {
-  description = "Minecraft Java server — Fabric 1.21.10 on NixOS 25.11";
+  description = "Minecraft Java server — NeoForge 1.21.1 on NixOS 25.11";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";

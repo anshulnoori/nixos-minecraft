@@ -23,7 +23,6 @@
     "-XX:+UseNUMA"
     "-XX:+PerfDisableSharedMem"
     "-XX:MaxGCPauseMillis=200"
-    "-Dfabric.systemLibraries=true"
     "-Djava.awt.headless=true"
     "-Xss2M"
   ];
@@ -35,10 +34,10 @@ in {
     dataDir = "/srv/minecraft";
     runDir = "/run/minecraft";
 
-    servers.fabric = {
+    servers.neoforge = {
       enable = true;
       autoStart = true;
-      package = pkgs.fabricServers.fabric-1_21_1.override {
+      package = pkgs.neoforgeServers.neoforge-1_21_1.override {
         loaderVersion = "0.18.4";
       };
       restart = "always";
@@ -82,7 +81,7 @@ in {
     };
   };
 
-  systemd.services.minecraft-server-fabric = {
+  systemd.services.minecraft-server-neoforge = {
     path = [pkgs.git pkgs.git-lfs];
 
     environment = {
