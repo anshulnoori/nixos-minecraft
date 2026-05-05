@@ -36,7 +36,7 @@
   in {
     open = false;
     modesetting.enable = true;
-    package = helpers.kernelModuleLLVMOverride config.boot.kernelPackages.nvidia_x11;
+    package = (helpers.kernelModuleLLVMOverride config.boot.kernelPackages).nvidia_x11;
     powerManagement = {
       enable = true;
       finegrained = false;
