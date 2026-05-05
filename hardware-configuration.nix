@@ -31,12 +31,10 @@
     enable32Bit = false;
   };
 
-  hardware.nvidia = let
-    helpers = pkgs.callPackage "${inputs.nix-cachyos-kernel.outPath}/helpers.nix" {};
-  in {
+  hardware.nvidia = {
     open = false;
     modesetting.enable = true;
-    package = (helpers.kernelModuleLLVMOverride config.boot.kernelPackages).nvidia_x11;
+    package = config.boot.kernelPackages.nvidia_x11;
     powerManagement = {
       enable = true;
       finegrained = false;
