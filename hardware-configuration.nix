@@ -33,7 +33,9 @@
   hardware.nvidia = {
     open = false;
     modesetting.enable = true;
-    package = config.boot.kernelPackages.nvidia_x11;
+    package = config.boot.kernelPackages.nvidia_x11.overrideAttrs (old: {
+      makeFlags = [];
+    });
     powerManagement = {
       enable = true;
       finegrained = false;
