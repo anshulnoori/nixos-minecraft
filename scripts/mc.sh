@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-SERVER_DIR="/srv/minecraft/fabric"
+SERVER_DIR="/srv/minecraft/neoforge"
 FLAKE_DIR="/etc/nixos"
 
 info() { echo -e "\e[34m[MC INFO]\e[0m $1"; }
@@ -30,17 +30,17 @@ show_help() {
 case "$1" in
 start | stop | restart | status)
   info "Executing systemctl $1..."
-  sudo systemctl "$1" minecraft-server-fabric
+  sudo systemctl "$1" minecraft-server-neoforge
   ;;
 
 c | console)
   info "Attaching to console..."
-  sudo -u minecraft tmux -S /run/minecraft/fabric.sock attach
+  sudo -u minecraft tmux -S /run/minecraft/neoforge.sock attach
   ;;
 
 log)
   info "Following logs..."
-  sudo journalctl -u minecraft-server-fabric -f
+  sudo journalctl -u minecraft-server-neoforge -f
   ;;
 
 apply)
@@ -50,8 +50,8 @@ apply)
 
 safe)
   info "Locating Nix Java and attempting Safe Mode repair..."
-  sudo systemctl stop minecraft-server-fabric
-  JAVA_EXEC=$(systemctl show minecraft-server-fabric.service -p ExecStart --value | sed 's/.*path=\([^ ;]*\).*/\1/')
+  sudo systemctl stop minecraft-server-neoforge
+  JAVA_EXEC=$(systemctl show minecraft-server-neoforge.service -p ExecStart --value | sed 's/.*path=\([^ ;]*\).*/\1/')
 
   if [ ! -f "$JAVA_EXEC" ]; then
     error "Could not locate Java binary. Try running 'mc apply' first."
@@ -64,7 +64,7 @@ safe)
 clean)
   info "Cleaning stale locks and sockets..."
   sudo rm -f "$SERVER_DIR/world/session.lock"
-  sudo rm -f "/run/minecraft/fabric.sock"
+  sudo rm -f "/run/minecraft/neoforge.sock"
   info "Cleanup complete."
   ;;
 

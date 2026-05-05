@@ -136,9 +136,9 @@
       sha512 = "fd335b7789321a1d0de9691d855c2bcc51d669f4614bdd2cd6fe17f7881f9dd39e63cb28c39a1a1798e98a6876ad1658ef2e3805e884f13e4650810611227849";
     })
     (pkgs.fetchurl {
-      name = "DistantHorizons-3.0.2-b-1.21.1-fabric-neoforge.jar";
-      url = "https://cdn.modrinth.com/data/uCdwusMi/versions/KkaaQtTD/DistantHorizons-3.0.2-b-1.21.1-fabric-neoforge.jar";
-      sha512 = "dc69b30efd3192a39209d35fa785ea39f92a18a1f7ef1361e9d52cebed055f99834944dbf33b102f14c39c6091cfe4b3fd7b4effda77a3436cecf395f02bb754";
+      name = "DistantHorizons-3.0.3-b-1.21.1-fabric-neoforge.jar";
+      url = "https://cdn.modrinth.com/data/uCdwusMi/versions/oYXIfeus/DistantHorizons-3.0.3-b-1.21.1-fabric-neoforge.jar";
+      sha512 = "8b39994ee6c5d71b8afacc80c2d13dd92fad10281374392c0049d1b6aebc823d7e137125268dee7383d3ff753eacf708fbe87d773cf0087d7b6057a05cf18ad3";
     })
     (pkgs.fetchurl {
       name = "DungeonsArise-1.21.1-2.1.68-release.jar";
@@ -281,9 +281,9 @@
       sha512 = "00e0129978efa67e619fadaed236de097b687612b9eefb7254c9c2e4fa449186c8ef4035ba17cf6792f3050703b1ee151858db81be0250d430aa9c9108485566";
     })
     (pkgs.fetchurl {
-      name = "MyNethersDelight-1.21.1-1.9.jar";
-      url = "https://cdn.modrinth.com/data/O53VhQoZ/versions/n2vJCdff/MyNethersDelight-1.21.1-1.9.jar";
-      sha512 = "0c32e35b573d9a15a1f1fdfdc3d0af8c59a38a41918ee6e6b00f6b9fd8f0997609aea8f372110caaa4d284e31583eeb9ccdbb8c29b6cd72b9fca81889ac8598f";
+      name = "MyNethersDelight-1.21.1-1.10.2.jar";
+      url = "https://cdn.modrinth.com/data/O53VhQoZ/versions/qBUSJw5Z/MyNethersDelight-1.21.1-1.10.2.jar";
+      sha512 = "2d16064b7cbbc1ef829c731d7ede5c680709ac6fe808c5bf2122443aa17862f86860b9d61f42b39847bebe6dfff42b883696503b986a9c88c5b6dfa82cd5d0fe";
     })
     (pkgs.fetchurl {
       name = "NE-1.21.1-1.10.0.jar";
@@ -596,9 +596,9 @@
       sha512 = "191f2d88e4760343c141fac1c14239215dadffcacd934767e4d796a97fe09c43cde3b819a4137ab502db0f9995ee11cac3cff805d7c602241798e5cf155cb743";
     })
     (pkgs.fetchurl {
-      name = "cc_sable-neoforge-1.2.2.jar";
-      url = "https://cdn.modrinth.com/data/OPNBxiZD/versions/WeMVsTHt/cc_sable-neoforge-1.2.2.jar";
-      sha512 = "4fd4b0b105c83497957c1281e94d49db95e1626b078b4446bd355f38b08d639e725ed838c42a4dc2912f27c4376f195fbe48666219973a096d3cfd101f14c6b9";
+      name = "cc_sable-neoforge-1.2.3.jar";
+      url = "https://cdn.modrinth.com/data/OPNBxiZD/versions/RPIcIbOf/cc_sable-neoforge-1.2.3.jar";
+      sha512 = "83cc13851f0e6056158dd8e29e3518775cd1a4d087b627f2e273be65ce78e8b70c436e4cca6c01e57f332f89f08b82e42fff0955bbafe650993f052fcacaecbe";
     })
     (pkgs.fetchurl {
       name = "ccbr-1.2.0-neoforge-1.21.1.jar";
@@ -821,9 +821,9 @@
       sha512 = "1dda17f32d92b92ac2e953f7cc28efd6be4d627ca85f4639654bbc3acdc9c879bf0c1fc2f66e0956874d6e21928c1556df1630ee2243d67683e1eefe26312fc7";
     })
     (pkgs.fetchurl {
-      name = "createfood-neoforge-1.21.1-2.3.0.jar";
-      url = "https://cdn.modrinth.com/data/4HnO3el1/versions/OViKhK8K/createfood-neoforge-1.21.1-2.3.0.jar";
-      sha512 = "f35151c54a3a1993ad3f68438244528028e6ce2e22994f9ad8e507f27aa9795396de5334902de01b758d382223fc575a72a8ce6ce3dfc5f7c10aab109eaff8d0";
+      name = "createfood-neoforge-1.21.1-2.4.0.jar";
+      url = "https://cdn.modrinth.com/data/4HnO3el1/versions/9kslwM0m/createfood-neoforge-1.21.1-2.4.0.jar";
+      sha512 = "e7d6bf6aafdbc83d8c41a4a931fa93697469974af8924313e7d6c9fb37b528be07164fdef708e2d631acba08efd8e663d324843496ecf3e83cb0930629a0f0c8";
     })
     (pkgs.fetchurl {
       name = "createhorsepower-1.21.1-1.1.0.jar.disabled";
@@ -841,9 +841,9 @@
       sha512 = "844ae32ff0d22f4d3c83db3bae2f6edc0f74cd1a530f900bf18829838d5a354b1e439e52688416130d9fd9a52c3310458bbdbc7458f4c1c1d8ffb088ae802d32";
     })
     (pkgs.fetchurl {
-      name = "createpropulsion-1.1.0.jar";
-      url = "https://cdn.modrinth.com/data/ApkoHNO9/versions/qbgJq3vb/createpropulsion-1.1.0.jar";
-      sha512 = "b5a5dee59b5011b81b36dfae01feec1695de91e93f729419f9859b0789b397a8383f94e804754a6fb1b59e1bc922da962365bfc0b20a6ed8ae896cc6cbf383f1";
+      name = "createpropulsion-1.1.1.jar";
+      url = "https://cdn.modrinth.com/data/ApkoHNO9/versions/4Zb5Zfn3/createpropulsion-1.1.1.jar";
+      sha512 = "69cf285a06be2135fc7571039930025df4013393e72a521bea1151bd5198e6b7b0ef2db062f30fcf77d14e7cec61818b108e4d24ff62a01e126989e578d2f90a";
     })
     (pkgs.fetchurl {
       name = "createrailwaysnavigator-neoforge-1.21.1-beta-0.9.0-C6.jar";
@@ -901,9 +901,9 @@
       sha512 = "e8e46f601b84f837a915d6fce0bdc085f5873122acd781844b053bd2a5ace0a904fba02f5f0516c9a2ed16003e4282d99e9b2fc32d77a7e95ad7b0bc6eb2649e";
     })
     (pkgs.fetchurl {
-      name = "dragonlib-neoforge-1.21.1-beta-3.0.25.jar";
-      url = "https://cdn.modrinth.com/data/sbIsGaOV/versions/JR8KnpFM/dragonlib-neoforge-1.21.1-beta-3.0.25.jar";
-      sha512 = "60ce8a8cc1ae22fbe5565b85ae22c0a47955fd86825fa47f8d4d7f8047a557eb5520e04dd4ea70fece32f7bb3ae74e13c573fd4eb7dacae59d6dd465149f8af4";
+      name = "dragonlib-neoforge-1.21.1-beta-3.0.26.jar";
+      url = "https://cdn.modrinth.com/data/sbIsGaOV/versions/6bSNB0Np/dragonlib-neoforge-1.21.1-beta-3.0.26.jar";
+      sha512 = "c6aac14f108c0a023585bf38a1c587ec4e7c63a7659b403432e281370a3ef48d2c056831bdf0859cb7061aeca67aba9d25c10a25b74b82588426a2b0b7a5d925";
     })
     (pkgs.fetchurl {
       name = "dtbop-3.4.0.jar";
@@ -1221,9 +1221,9 @@
       sha512 = "9bf496a8db8c6074ab32374042ae15e87fe87d897e21de29d459556fa8d7d0e73f2718f28a0236181cfb3c1bc66c776b4d079f0a7084696ad490275ab1b9eb6e";
     })
     (pkgs.fetchurl {
-      name = "midnightlib-neoforge-1.9.2+1.21.1.jar";
-      url = "https://cdn.modrinth.com/data/codAaoxh/versions/Puk24qHu/midnightlib-neoforge-1.9.2%2B1.21.1.jar";
-      sha512 = "52c205e04f879cdb6451b2aff9856f6541ce98367967949f4e77a6580304587577059bea72e5f8ba69b040c673d8a7966f706269b180b8b33946522b41f2c369";
+      name = "midnightlib-neoforge-1.9.3+1.21.1.jar";
+      url = "https://cdn.modrinth.com/data/codAaoxh/versions/6Gv5jvTB/midnightlib-neoforge-1.9.3%2B1.21.1.jar";
+      sha512 = "5913e7e8ebbffb72323514aa5bedce19056884416d0a33b38af1761ee74cfa600996cde9bd7d709ee2158476faa2e735b2e6ea6107296d471d2c5b7b35d9da6c";
     })
     (pkgs.fetchurl {
       name = "minersdelight-1.21.1-1.4.5.jar";
@@ -1251,9 +1251,9 @@
       sha512 = "dbf20127270e7a96d731f8294cab37665c7f707ba5faf9f5205099d1ba267386dcd1755e04c9c67214f5557ffc34eb4884359886db2ae2369ca794ad8b2ecb12";
     })
     (pkgs.fetchurl {
-      name = "moonlight-1.21-2.29.33-neoforge.jar";
-      url = "https://cdn.modrinth.com/data/twkfQtEc/versions/RftyTwKR/moonlight-1.21-2.29.33-neoforge.jar";
-      sha512 = "b1d30891fd44cf8a060d148005ccf13dc8f7d84074ec1b3efa1002408b125f33dcc3f6a1eae2b95171fb48edcabfc2eb41aaf6264614193cc1bbdde3dfd793ba";
+      name = "moonlight-neoforge-1.21.1-3.0.5.jar";
+      url = "https://cdn.modrinth.com/data/twkfQtEc/versions/d5bksJeJ/moonlight-neoforge-1.21.1-3.0.5.jar";
+      sha512 = "0bd341a9e483bf9d16e6fe35ec099d59a7d6a64ca38dd7a1f1b8d3482bca24a839439d11009544b2744e925677d32366b9887e5ed3797e2a20f0df939f08916e";
     })
     (pkgs.fetchurl {
       name = "more_armor_trims-neoforge-1.5.3-1.21.1.jar";
@@ -1506,9 +1506,9 @@
       sha512 = "abbb6dcacfd6920cfb166c39e449baf3625a6a7a8c832edb71453f3fa1ee5654cccd7cd993f4ef38ddfb023baa321e9d7d33407f669d18e661f14cdc95e586ac";
     })
     (pkgs.fetchurl {
-      name = "sophisticatedbackpacks-1.21.1-3.25.42.1709.jar";
-      url = "https://cdn.modrinth.com/data/TyCTlI4b/versions/lx2GnloQ/sophisticatedbackpacks-1.21.1-3.25.42.1709.jar";
-      sha512 = "defa3aed5268093ae2c9be4c51de5887f7d63e1f2faa4e20476b922b5f0bfdf3b626b9289cdf783077a897c5c817248e76ff32846cc5947b4e01abd0d9a147bf";
+      name = "sophisticatedbackpacks-1.21.1-3.25.44.1736.jar";
+      url = "https://cdn.modrinth.com/data/TyCTlI4b/versions/ZMuJ1TI7/sophisticatedbackpacks-1.21.1-3.25.44.1736.jar";
+      sha512 = "0704060b2d0e2e88bc771da1b26fe262563ac6a814f129a1207782d7edbac8bdc1b4057669c5bc94976e6eb74c6386c0735f93628b2d1f23e7eac4ae6562e185";
     })
     (pkgs.fetchurl {
       name = "sophisticatedbackpackscreateintegration-1.21.1-0.1.5.29.jar";
@@ -1516,14 +1516,14 @@
       sha512 = "130d9a77f2b43926c9398983740813d268ce58e022a3c8e0eab98ba2439b9d3b2b819b0a845a8eb06bc336bdeb16e86cd4cbe8f7af834c11aaf1ae678977fcac";
     })
     (pkgs.fetchurl {
-      name = "sophisticatedcore-1.21.1-1.4.33.1808.jar";
-      url = "https://cdn.modrinth.com/data/nmoqTijg/versions/SxdPiugu/sophisticatedcore-1.21.1-1.4.33.1808.jar";
-      sha512 = "1dce78949b386995d5099883dc4e49e7cf7c3000863325f90bbc233a19f028dad0ccb8829bbde1b8f6944fdb7a8e266a39dc0cc930957b1544424d14c396dda2";
+      name = "sophisticatedcore-1.21.1-1.4.35.1823.jar";
+      url = "https://cdn.modrinth.com/data/nmoqTijg/versions/ErcuCe4o/sophisticatedcore-1.21.1-1.4.35.1823.jar";
+      sha512 = "c2c9c4e9e99a43292297f92b1f4dcfa1c9000d9aa684fed07153a4896ae9791d90f29cf0d8365c61d1915c5a6ee4c5cb881eee6c2385b562770281c3b700c0f0";
     })
     (pkgs.fetchurl {
-      name = "sophisticatedinventoryinteractions-1.21.1-0.1.7.82.jar";
-      url = "https://cdn.modrinth.com/data/orgY0JIo/versions/LOI1c1b3/sophisticatedinventoryinteractions-1.21.1-0.1.7.82.jar";
-      sha512 = "8d65ab8dae11afcd7ae8b24449f34c092a62564ca296be2e200cb2d6b891a13f7e58d209a659fa574be99c515bbd67915562bbf20507407a0368778a8ebfedc0";
+      name = "sophisticatedinventoryinteractions-1.21.1-0.1.8.115.jar";
+      url = "https://cdn.modrinth.com/data/orgY0JIo/versions/WQ9jmSi3/sophisticatedinventoryinteractions-1.21.1-0.1.8.115.jar";
+      sha512 = "390285deb05efabc2db5398cd1ce999eda1d725e1e48d5dd32b23907e75f0593774fed08b57dd8cd3232bd989fa864a48f440dd1c52585e4b9e91caba6075f44";
     })
     (pkgs.fetchurl {
       name = "sophisticateditemactions-1.21.1-0.5.2.237.jar";
@@ -1531,9 +1531,9 @@
       sha512 = "bdf333e859e011d5f6e5d3287d1b50a71d265126d7f7af84227f120aaeed090bd940ede47ba333276ca2c1b820ea71986b1e237a7dd5c5285e9441a89dee2f4a";
     })
     (pkgs.fetchurl {
-      name = "sophisticatedstorage-1.21.1-1.5.45.1697.jar";
-      url = "https://cdn.modrinth.com/data/hMlaZH8f/versions/86mg1s6h/sophisticatedstorage-1.21.1-1.5.45.1697.jar";
-      sha512 = "8ca8fa69dc92bfe31cef416aed5717f02239976fca18f5049ad437c732320ba77641b903fa99140dd813459b7e29fe9a72269e902577e514c445a7a0f53e67d7";
+      name = "sophisticatedstorage-1.21.1-1.5.46.1717.jar";
+      url = "https://cdn.modrinth.com/data/hMlaZH8f/versions/XtIx2bZG/sophisticatedstorage-1.21.1-1.5.46.1717.jar";
+      sha512 = "8e4b853dfd600e96c1e2cb5b3ae4865eaa7a451c3b3a2b8627d0fff204cd891f20961de969ae0f5f3e704542bf8b5fa8dd1668ebe13772eda4c1b342fe545db1";
     })
     (pkgs.fetchurl {
       name = "sophisticatedstoragecreateintegration-1.21.1-0.1.17.132.jar";
