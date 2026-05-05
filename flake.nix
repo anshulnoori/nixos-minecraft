@@ -2,7 +2,7 @@
   description = "Minecraft Java server — NeoForge 1.21.1 on NixOS 25.11";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     nix-minecraft = {
       url = "github:Infinidoge/nix-minecraft";
