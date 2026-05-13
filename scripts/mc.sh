@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 
-SERVER_DIR="/srv/minecraft/neoforge"
+# Configurable path components (mirrors nix-minecraft options):
+#   services.minecraft-servers.dataDir  defaults to /srv/minecraft
+#   server name key                     e.g. "neoforge" in servers.neoforge
+MC_BASE_DIR="/srv"
+MC_NAME="minecraft"
+MC_LOADER="neoforge"
+
+SERVER_DIR="$MC_BASE_DIR/$MC_NAME/$MC_LOADER"
 FLAKE_DIR="/etc/nixos"
 
 info() { echo -e "\e[34m[MC INFO]\e[0m $1"; }
@@ -16,7 +23,7 @@ show_help() {
   echo ""
   echo "Console & Logs:"
   echo "  c, console  Attach to tmux console (Ctrl+B, D to detach)"
-  echo "  log         Follow system logs (won't close on crash)"
+  echo "  log         Open latest.log in interactive viewer (Q to quit)"
   echo ""
   echo "NixOS & Repair:"
   echo "  apply       Run nixos-rebuild switch --flake"
@@ -39,8 +46,13 @@ c | console)
   ;;
 
 log)
-  info "Following logs..."
-  sudo journalctl -u minecraft-server-neoforge -f
+  LOG_FILE="$SERVER_DIR/logs/latest.log"
+  if [ ! -f "$LOG_FILE" ]; then
+    error "Log file not found: $LOG_FILE"
+    exit 1
+  fi
+  info "Opening $LOG_FILE..."
+  less +G "$LOG_FILE"
   ;;
 
 apply)
